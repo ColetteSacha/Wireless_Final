@@ -153,7 +153,7 @@
             <Comment Bounds="-860 685 84.8 28.8" Id="1443" xmlns="http://www.ni.com/MocCommon">
                 <p.Text>R1[k],R5[k]</p.Text>
             </Comment>
-            <Multiply Bounds="35 425 30 30" Id="1452" Terminals="o=1468, c0t0v=1679, c1t0v=2082" />
+            <Multiply Bounds="35 425 30 30" Id="1452" Terminals="o=1468, c0t0v=1679, c1t0v=2100" />
             <Multiply Bounds="-150 670 30 30" Id="1454" Terminals="o=1469, c0t0v=1699, c1t0v=2084" />
             <ComplexConjugate Bounds="-625 665 30 30" Id="1455" />
             <Multiply Bounds="-135 745 30 30" Id="1459" Terminals="o=1470, c0t0v=1712, c1t0v=2086" />
@@ -167,7 +167,7 @@
             <Comment Bounds="195 555 91.2 28.8" Id="1472" xmlns="http://www.ni.com/MocCommon">
                 <p.Text>~s0,~s2,~s4</p.Text>
             </Comment>
-            <Multiply Bounds="-150 995 30 30" Id="1473" Terminals="o=1496, c0t0v=1739, c1t0v=2082" />
+            <Multiply Bounds="-150 995 30 30" Id="1473" Terminals="o=1496, c0t0v=1739, c1t0v=2100" />
             <Multiply Bounds="-255 1055 30 45" Id="1476" Terminals="o=1495, c0t0v=1751, c1t0v=2084, c2t0v=1523" VerticalChunkCount="3" />
             <Multiply Bounds="-250 1300 30 30" Id="1483" Terminals="o=1494, c0t0v=1764, c1t0v=2086" />
             <Multiply Bounds="-245 1360 30 45" Id="1486" Terminals="o=1493, c0t0v=1767, c1t0v=2090, c2t0v=1526" VerticalChunkCount="3" />
@@ -363,8 +363,8 @@
                 </p.PropertyItem>
             </PropertyNode>
             <Wire Id="1996" Joints="N(1975:Value) N(1995:instance in)" xmlns="http://www.ni.com/PlatformFramework" />
-            <DecimateArray Bounds="-1190 580 40 30" Id="2011" Terminals="array=2012, c0t0v=2082, c1t0v=2066" />
-            <Wire Id="2012" Joints="N(620:Value) h(200) v(-20) N(2011:array)" xmlns="http://www.ni.com/PlatformFramework" />
+            <DecimateArray Bounds="-1190 580 40 30" Id="2011" Terminals="array=2012, c0t0v=2100, c1t0v=2066" />
+            <Wire Id="2012" Joints="N(620:Value) h(165) B(1) h(35) v(-20) N(2011:array) B(1) v(-110) N(2026:array)" xmlns="http://www.ni.com/PlatformFramework" />
             <Comment Bounds="-1130 570 51.2 28.8" Id="2014" xmlns="http://www.ni.com/MocCommon">
                 <p.Text>R0,R4</p.Text>
             </Comment>
@@ -395,9 +395,9 @@
             </MethodCall>
             <Wire Id="2025" Joints="N(2022:c0t0v) h(7) v(-5) N(2024:L0)" xmlns="http://www.ni.com/PlatformFramework" />
             <ArraySize Bounds="-1225 490 40 20" Id="2026" />
-            <Divide Bounds="-1155 105 30 30" Id="2028" />
-            <Wire Id="2029" Joints="N(2026:size(s\)) h(20) v(-395) N(2028:x)" xmlns="http://www.ni.com/PlatformFramework" />
-            <Wire Id="2031" Joints="N(2028:x/y) h(15) B(1) h(75) B(2) h(60) v(-15) N(2024:L2) B(2) v(45) N(2036:L2) B(1) v(50) h(25) v(50) h(20) B(11) N(2043:L2) B(11) v(55) N(2052:L2)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Divide Bounds="-1205 105 30 30" Id="2028" />
+            <Wire Id="2029" Joints="N(2026:size(s\)) h(5) v(-360) h(-35) v(-35) N(2028:x)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="2031" Joints="N(2028:x/y) h(65) B(1) h(75) B(2) h(60) v(-15) N(2024:L2) B(2) v(45) N(2036:L2) B(1) v(50) h(25) v(50) h(20) B(11) N(2043:L2) B(11) v(55) N(2052:L2)" xmlns="http://www.ni.com/PlatformFramework" />
             <DecimateArray Bounds="-1105 135 40 30" Id="2034" Terminals="array=2039, c0t0v=2037, c1t0v" />
             <MethodCall Bounds="-1005 140 50 50" Id="2036" Target="Repeat\.gvi">
                 <p.MethodDeclaration>
@@ -448,12 +448,12 @@
             </Comment>
             <Wire Id="2066" Joints="N(2011:c1t0v) h(5) v(75) N(1455:x + iy)" xmlns="http://www.ni.com/PlatformFramework" />
             <Wire Id="2075" Joints="N(2016:c1t0v) h(405) v(-5) N(1463:x + iy)" xmlns="http://www.ni.com/PlatformFramework" />
-            <Wire Id="2082" Joints="N(2011:c0t0v) h(5) B(1) h(615) B(2) h(260) v(-120) h(90) v(-30) N(1452:c1t0v) B(2) v(420) N(1473:c1t0v) B(1) v(-55) h(-90) v(-45) N(2026:array)" xmlns="http://www.ni.com/PlatformFramework" />
             <Wire Id="2084" Joints="N(1455:x - iy) h(5) v(10) h(30) B(3) N(1454:c1t0v) B(3) v(420) h(300) v(-35) N(1476:c1t0v)" xmlns="http://www.ni.com/PlatformFramework" />
             <Wire Id="2086" Joints="N(2016:c0t0v) h(5) v(-70) h(540) v(-5) h(45) B(5) N(1459:c1t0v) B(5) v(555) N(1483:c1t0v)" xmlns="http://www.ni.com/PlatformFramework" />
             <Wire Id="2090" Joints="N(1463:x - iy) h(15) B(1) h(283) v(45) N(1462:c1t0v) B(1) v(590) h(330) v(-55) N(1486:c1t0v)" xmlns="http://www.ni.com/PlatformFramework" />
             <Wire Id="2094" Joints="N(1498:outArray) h(5) v(-10) N(1547:x)" xmlns="http://www.ni.com/PlatformFramework" />
             <Wire Id="2098" Joints="N(1995:c0t0v) h(5) v(-400) h(260) B(3) h(50) v(-30) B(5) h(75) v(-210) N(2028:y) B(5) v(-60) N(1956:L3) B(3) v(-145) B(11) N(1955:L3) B(11) v(-55) B(13) N(1953:L3) B(13) v(-55) N(1951:L3)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="2100" Joints="N(2011:c0t0v) h(620) B(1) h(260) v(-120) h(90) v(-30) N(1452:c1t0v) B(1) v(420) N(1473:c1t0v)" xmlns="http://www.ni.com/PlatformFramework" />
         </BlockDiagram>
         <CPFrontPanel Height="[float]1600" Id="13" Width="[float]2000">
             <Cluster BaseName="[string]Error In" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]Error" Height="[float]165" Id="101" Label="[UIModel]138" Left="[float]349" Top="[float]33" Value="{DataItemBinding Id=99}" Width="[float]138">
