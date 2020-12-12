@@ -19,7 +19,7 @@
                 </Canvas>
             </IconPanel>
         </Icon>
-        <ConnectorPane Height="50" Id="9" ListViewHeight="165" ListViewWidth="150" Width="50" xmlns="http://www.ni.com/PlatformFramework">
+        <ConnectorPane Height="50" Id="9" ListViewHeight="180" ListViewWidth="150" Width="50" xmlns="http://www.ni.com/PlatformFramework">
             <ConnectorPaneTerminal ListViewHotspot="0 95" Parameter="551" />
             <ConnectorPaneTerminal Hotspot="0 15" ListViewHotspot="0 125" Parameter="678" />
             <ConnectorPaneTerminal Hotspot="0 25" />
@@ -29,7 +29,7 @@
             <ConnectorPaneTerminal Hotspot="25 0" />
             <ConnectorPaneTerminal Hotspot="35 0" />
             <ConnectorPaneTerminal Hotspot="50 5" ListViewHotspot="150 155" Parameter="6044" />
-            <ConnectorPaneTerminal Hotspot="50 15" />
+            <ConnectorPaneTerminal Hotspot="50 15" ListViewHotspot="150 170" Parameter="8643" />
             <ConnectorPaneTerminal Hotspot="50 25" ListViewHotspot="150 110" Parameter="203" />
             <ConnectorPaneTerminal Hotspot="50 35" ListViewHotspot="150 140" Parameter="3298" />
             <ConnectorPaneTerminal Hotspot="50 45" ListViewHotspot="150 50" Parameter="184" />
@@ -58,6 +58,10 @@
                 <Label Id="6040" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]6037" Left="[float]5" Locked="[bool]True" Text="[string]Key Bit Sequence" Top="[float]0" />
                 <Label Id="6043" IsVisualChild="[bool]False" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]6036" Left="[float]65" Locked="[bool]True" Text="[string]Queue Out " Top="[float]1374" />
             </Cluster>
+            <ArrayViewer ArrayElement="[UIModel]8646" Columns="[int]1" Dimensions="[int]1" ElementType="[Type]Double" Id="8645" IsFixedSize="[bool]False" Name="[string]Symbols sent" Orientation="[SMOrientation]Horizontal" Rows="[int]1" Value="{DataItemBinding Id=8643}" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+                <p.DefaultElementValue>0x0;0x0</p.DefaultElementValue>
+                <NumericText Height="[float]25" Id="8646" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" ValueType="[Type]ComplexDouble" Width="[float]60" />
+            </ArrayViewer>
         </FrontPanelUnplacedItems>
         <BlockDiagram Id="12">
             <DataAccessor Bounds="1265 280 40 15" DataItem="184" Id="14" Label="177">
@@ -66,7 +70,7 @@
             <DataAccessor Bounds="-560 300 40 15" DataItem="185" Id="15" Label="178">
                 <Terminal DataType="Error" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
             </DataAccessor>
-            <CaseStructure Bounds="-480 -105 1729 810" DataType="Error" Id="19" Selected="20" UserSelectorBounds="814 0 100 17">
+            <CaseStructure Bounds="-480 -105 1729 810" DataType="Error" Id="19" Selected="20" UserSelectorBounds="814.4 0 100.8 16.8">
                 <CaseStructure.Case Bounds="5 5 1719 800" Id="20" Pattern="No Error">
                     <DataAccessor Bounds="850 190 40 15" DataItem="189" Id="28" Label="31">
                         <Terminal DataType="Double" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
@@ -108,7 +112,7 @@
                     <Divide Bounds="805 140 30 30" Id="45" />
                     <TextNode AttachedTo="39" Bounds="425 720 159 16" Id="46" Text="coerced carrier frequency (Hz)" xmlns="http://www.ni.com/PlatformFramework" />
                     <TextNode AttachedTo="40" Bounds="425 740 93 16" Id="47" Text="coerced gain (dB)" xmlns="http://www.ni.com/PlatformFramework" />
-                    <CaseStructure Bounds="675 250 910 235" DataType="@1130385254_0" Default="100" Id="48" Selected="100" UserSelectorBounds="368 0 174 17">
+                    <CaseStructure Bounds="675 250 910 235" DataType="@1130385254_0" Default="100" Id="48" Selected="100" UserSelectorBounds="368 0 174.4 16.8">
                         <CaseStructure.Case Bounds="5 5 900 225" Id="98" Pattern="&quot;Single Shot&quot;">
                             <Literal Bounds="85 110 26 15" DataType="Boolean" Facade="NationalInstruments.MocCommon.Modeling.IBooleanBehavior" Id="107" xmlns="http://www.ni.com/MocCommon">
                                 <p.Data>True</p.Data>
@@ -192,11 +196,11 @@
                                 <DataAccessor Bounds="430 40 40 15" DataItem="197" Id="148" Label="154">
                                     <Terminal DataType="Boolean" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
                                 </DataAccessor>
-                                <Literal Bounds="390 20 26 15" DataType="Boolean" Facade="NationalInstruments.MocCommon.Modeling.IBooleanBehavior" Id="149" xmlns="http://www.ni.com/MocCommon">
+                                <Literal Bounds="390.4 20 25.6 15.2" DataType="Boolean" Facade="NationalInstruments.MocCommon.Modeling.IBooleanBehavior" Id="149" xmlns="http://www.ni.com/MocCommon">
                                     <p.Data>True</p.Data>
                                     <BooleanBehavior />
                                 </Literal>
-                                <Literal Bounds="70 125 26 15" DataType="Boolean" Facade="NationalInstruments.MocCommon.Modeling.IBooleanBehavior" Id="150" xmlns="http://www.ni.com/MocCommon">
+                                <Literal Bounds="70.4 125 25.6 15.2" DataType="Boolean" Facade="NationalInstruments.MocCommon.Modeling.IBooleanBehavior" Id="150" xmlns="http://www.ni.com/MocCommon">
                                     <p.Data>False</p.Data>
                                     <BooleanBehavior />
                                 </Literal>
@@ -392,6 +396,7 @@
                                 <Parameter Id="R1" Desc="HW Parameters Out" />
                                 <Parameter Id="R0" Desc="Modulation Parameters Out" />
                                 <Parameter Id="R2" Desc="Output conplex waveform 1" />
+                                <Parameter Id="R5" Desc="Symbols sent" />
                                 <Parameter Id="L2" Desc="Number of Data Symbols" />
                                 <Parameter Id="T0" Desc="Key Bit Sequence" />
                                 <Parameter Id="R4" Desc="queue out" />
@@ -410,6 +415,7 @@
                         <Terminal DataType="@1976405295_0" Direction="Output" Hotspot="80 15" Id="R1" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
                         <Terminal DataType="@384786743_0" Direction="Output" Hotspot="80 5" Id="R0" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
                         <Terminal DataType="@1785820191_0" Direction="Output" Hotspot="80 25" Id="R2" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+                        <Terminal DataType="ComplexDouble[]" Direction="Output" Hotspot="80 55" Id="R5" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
                         <Terminal DataType="Int32" Direction="Output" Hotspot="0 25" Id="L2" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
                         <Terminal DataType="Int8[]" Direction="Output" Hotspot="15 0" Id="T0" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
                         <Terminal DataType="@-136323547_0" Direction="Output" Hotspot="80 45" Id="R4" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
@@ -443,6 +449,11 @@
                     </DataAccessor>
                     <TextNode AttachedTo="6045" Bounds="425 510 62 16" Id="6046" Text="&quot;Queue Out &quot;" xmlns="http://www.ni.com/PlatformFramework" />
                     <Wire Id="8640" Joints="N(3380:R2) h(20) B(1) h(35) B(2) N(103:48) B(2) v(105) N(92:Value) B(1) v(-175) N(42:instance in)" xmlns="http://www.ni.com/PlatformFramework" />
+                    <Wire Id="8642" Joints="N(3380:R5) h(90) v(-5) N(8644:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+                    <DataAccessor Bounds="395 390 40 15" DataItem="8643" Id="8644" Label="8647">
+                        <Terminal DataType="ComplexDouble[]" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+                    </DataAccessor>
+                    <TextNode AttachedTo="8644" Bounds="440 390 70 16" Id="8647" Text="Symbols sent" xmlns="http://www.ni.com/PlatformFramework" />
                 </CaseStructure.Case>
                 <CaseStructure.Case Bounds="5 5 1719 800" Id="21" Pattern="Error">
                     <Literal Bounds="1570 245 26 15" DataType="Boolean" Facade="NationalInstruments.MocCommon.Modeling.IBooleanBehavior" Id="95" xmlns="http://www.ni.com/MocCommon">
@@ -5877,6 +5888,11 @@
         </DataItem>
         <DataItem AdaptToDiagramType="True" DataType="Int32" Id="8612" Name="Plots_2">
             <p.DefaultValue>0</p.DefaultValue>
+        </DataItem>
+        <DataItem AdaptToDiagramType="True" CallDirection="Output" CallIndex="6" DataType="ComplexDouble[]" Id="8643" Name="Symbols sent">
+            <p.DefaultValue>
+                <Array Lengths="0" />
+            </p.DefaultValue>
         </DataItem>
         <DataTypeReferenceTable xmlns="http://www.ni.com/PlatformFramework">
             <p.TypeReference TypeId="-136323547_0">

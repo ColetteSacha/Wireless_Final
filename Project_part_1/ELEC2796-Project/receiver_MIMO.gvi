@@ -18,7 +18,7 @@
                 </Canvas>
             </IconPanel>
         </Icon>
-        <ConnectorPane Height="70" Id="9" ListViewHeight="360" ListViewWidth="150" Width="80" xmlns="http://www.ni.com/PlatformFramework">
+        <ConnectorPane Height="70" Id="9" ListViewHeight="390" ListViewWidth="150" Width="80" xmlns="http://www.ni.com/PlatformFramework">
             <ConnectorPaneTerminal ListViewHotspot="0 140" Parameter="518" />
             <ConnectorPaneTerminal Hotspot="0 15" ListViewHotspot="0 230" Parameter="1452" />
             <ConnectorPaneTerminal Hotspot="0 25" ListViewHotspot="0 245" Parameter="1471" />
@@ -26,7 +26,7 @@
             <ConnectorPaneTerminal Hotspot="0 45" ListViewHotspot="0 65" Parameter="122" />
             <ConnectorPaneTerminal Hotspot="15 0" ListViewHotspot="150 80" Parameter="131" />
             <ConnectorPaneTerminal Hotspot="25 0" />
-            <ConnectorPaneTerminal Hotspot="35 0" />
+            <ConnectorPaneTerminal Hotspot="35 0" ListViewHotspot="0 365" Parameter="2009" />
             <ConnectorPaneTerminal Hotspot="80 5" ListViewHotspot="150 155" Parameter="541" />
             <ConnectorPaneTerminal Hotspot="80 15" ListViewHotspot="150 170" Parameter="1074" />
             <ConnectorPaneTerminal Hotspot="80 25" ListViewHotspot="150 260" Parameter="1482" />
@@ -43,7 +43,7 @@
             <ConnectorPaneTerminal Hotspot="45 70" ListViewHotspot="150 125" Parameter="127" />
             <ConnectorPaneTerminal Hotspot="55 0" ListViewHotspot="150 110" Parameter="126" />
             <ConnectorPaneTerminal Hotspot="55 70" ListViewHotspot="150 200" Parameter="1232" />
-            <ConnectorPaneTerminal Hotspot="65 0" />
+            <ConnectorPaneTerminal Hotspot="65 0" ListViewHotspot="150 380" Parameter="2010" />
             <ConnectorPaneTerminal Hotspot="65 70" ListViewHotspot="150 320" Parameter="1883" />
         </ConnectorPane>
         <MethodDocumentation xmlns="http://www.ni.com/PlatformFramework" />
@@ -243,6 +243,11 @@
                 <Label Id="1478" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]1475" Left="[float]5" Locked="[bool]True" Text="[string]Key Bit Sequence" Top="[float]0" />
                 <Label Id="1481" IsVisualChild="[bool]False" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]1474" Left="[float]1254" Locked="[bool]True" Text="[string]queue out" Top="[float]981" />
             </Cluster>
+            <ArrayViewer ArrayElement="[UIModel]2012" Columns="[int]1" Dimensions="[int]1" ElementType="[Type]Double" Id="2011" IsFixedSize="[bool]False" Name="[string]symbol sent" Orientation="[SMOrientation]Horizontal" Rows="[int]1" Value="{DataItemBinding Id=2009}" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+                <p.DefaultElementValue>0x0;0x0</p.DefaultElementValue>
+                <NumericText Height="[float]25" Id="2012" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" ValueType="[Type]ComplexDouble" Width="[float]60" />
+            </ArrayViewer>
+            <NumericText BaseName="[string]Numeric" Height="[float]22" Id="2013" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Name="[string]mse out" Value="{DataItemBinding Id=2010}" ValueFormatter="[string]LV:G6" ValueType="[Type]Double" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
         </FrontPanelUnplacedItems>
         <BlockDiagram Id="12">
             <DataAccessor Bounds="-355 540 40 15" DataItem="119" Id="14" Label="110">
@@ -409,24 +414,15 @@
                         <Terminal DataType="@718127268_0" Direction="Output" Hotspot="50 15" Id="R1" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
                         <Terminal DataType="@-1808940691_0" Direction="Output" Hotspot="50 45" Id="R4" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
                     </MethodCall>
-                    <Comment Bounds="525 25 627.2 55.2" Id="49" xmlns="http://www.ni.com/MocCommon">
-                        <p.Text>"1.Determine the number of data symbols and get the key bit sequence and training sequence from the queue\n2. Process baseband signal\n3. Plot the symbol constellation and eye diagram for recovered symbols"</p.Text>
-                    </Comment>
                     <Comment Bounds="975 225 121.6 28.8" Id="47" xmlns="http://www.ni.com/MocCommon">
                         <p.Text>recovered symbols</p.Text>
                     </Comment>
                     <Wire Id="634" Joints="N(625:R0) N(1737:Value)" xmlns="http://www.ni.com/PlatformFramework" />
-                    <Comment Bounds="615 95 168 28.8" Id="50" xmlns="http://www.ni.com/MocCommon">
-                        <p.Text>2. Process baseband signal</p.Text>
-                    </Comment>
                     <Comment Bounds="510 385 112 28.8" Id="51" xmlns="http://www.ni.com/MocCommon">
                         <p.Text>key bit sequence</p.Text>
                     </Comment>
                     <Comment Bounds="150 95 433.6 41.6" Id="48" xmlns="http://www.ni.com/MocCommon">
                         <p.Text>"1.Determine the number of data symbols, the symbol rate, the overhead \noffset, and get the key bit sequence and training sequence from the queue"</p.Text>
-                    </Comment>
-                    <Comment Bounds="990 100 416 28.8" Id="52" xmlns="http://www.ni.com/MocCommon">
-                        <p.Text>3. Plot the symbol constellation and eye diagram for recovered symbols</p.Text>
                     </Comment>
                     <DataAccessor Bounds="270 445 40 15" DataItem="1221" Id="1219" Label="1220">
                         <Terminal DataType="Int8[]" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
@@ -444,7 +440,7 @@
                     <Wire Id="1339" Joints="N(585:B3) v(130) B(1) N(1230:Value) B(1) v(95) N(1685:L3)" xmlns="http://www.ni.com/PlatformFramework" />
                     <Wire Id="1340" Joints="N(585:B2) v(60) B(1) N(32:Value) B(1) v(155) N(1685:L2)" xmlns="http://www.ni.com/PlatformFramework" />
                     <Wire Id="1487" Joints="N(1486:22) N(558:L2)" xmlns="http://www.ni.com/PlatformFramework" />
-                    <Wire Id="1493" Joints="N(1958:R0) h(15) B(1) N(1681:L0) B(1) v(-40) N(625:L2)" xmlns="http://www.ni.com/PlatformFramework" />
+                    <Wire Id="1493" Joints="N(1958:R0) h(15) B(1) N(1681:L0) B(1) v(-40) h(40) B(4) N(625:L2) B(4) v(-45) h(35) v(-125) N(1991:x)" xmlns="http://www.ni.com/PlatformFramework" />
                     <Wire Id="1495" Joints="N(1958:R2) h(5) v(-10) N(1681:L1)" xmlns="http://www.ni.com/PlatformFramework" />
                     <Wire Id="1496" Joints="N(1958:R3) N(1681:L3)" xmlns="http://www.ni.com/PlatformFramework" />
                     <Wire Id="1540" Joints="N(608:R3) N(1958:L3)" xmlns="http://www.ni.com/PlatformFramework" />
@@ -638,6 +634,29 @@
                     <Wire Id="1981" Joints="N(1974:c1t0v) h(105) v(5) N(1978:c1t0v)" xmlns="http://www.ni.com/PlatformFramework" />
                     <Wire Id="1982" Joints="N(1974:c0t0v) h(170) v(10) N(1978:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
                     <Wire Id="1988" Joints="N(1978:outCluster) h(390) v(120) B(2) h(30) N(1958:T0) B(2) v(340) N(1685:L1)" xmlns="http://www.ni.com/PlatformFramework" />
+                    <DataAccessor Bounds="805 100 40 15" DataItem="2009" Id="1990" Label="2007">
+                        <Terminal DataType="ComplexDouble[]" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+                    </DataAccessor>
+                    <Subtract Bounds="940 55 30 30" Id="1991" />
+                    <Wire Id="1992" Joints="N(1991:x-y) h(20) B(1) v(-15) N(2001:c0t0v) B(1) v(20) N(2000:x + iy)" xmlns="http://www.ni.com/PlatformFramework" />
+                    <AddArrayElements Bounds="1115 50 30 30" Id="1993" />
+                    <Wire Id="1994" Joints="N(2001:o) h(30) B(1) N(1993:numeric array) B(1) v(45) N(1997:array)" xmlns="http://www.ni.com/PlatformFramework" />
+                    <Divide Bounds="1170 60 30 30" Id="1995" />
+                    <Wire Id="1996" Joints="N(1993:sum) N(1995:x)" xmlns="http://www.ni.com/PlatformFramework" />
+                    <ArraySize Bounds="1120 105 40 20" Id="1997" />
+                    <Wire Id="1998" Joints="N(1997:size(s\)) h(5) v(-40) N(1995:y)" xmlns="http://www.ni.com/PlatformFramework" />
+                    <DataAccessor Bounds="1285 70 40 15" DataItem="2010" Id="1999" Label="2008">
+                        <Terminal DataType="Double" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+                    </DataAccessor>
+                    <ComplexConjugate Bounds="1005 75 30 30" Id="2000" />
+                    <Multiply Bounds="1050 50 30 30" Id="2001" Terminals="o=1994, c0t0v=1992, c1t0v=2002" />
+                    <Wire Id="2002" Joints="N(2000:x - iy) h(5) v(-20) N(2001:c1t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+                    <ComplexToRealImaginary Bounds="1220 60 30 30" Id="2003" />
+                    <Wire Id="2004" Joints="N(1995:x/y) N(2003:x + iy)" xmlns="http://www.ni.com/PlatformFramework" />
+                    <Wire Id="2005" Joints="N(2003:x) h(7) v(10) N(1999:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+                    <Wire Id="2006" Joints="N(1990:Value) h(5) v(-30) N(1991:y)" xmlns="http://www.ni.com/PlatformFramework" />
+                    <TextNode AttachedTo="1990" Bounds="720 100 80 16" Id="2007" SizeToText="False" Text="symbol sent" xmlns="http://www.ni.com/PlatformFramework" />
+                    <TextNode AttachedTo="1999" Bounds="1330 70 43 16" Id="2008" Text="mse out" xmlns="http://www.ni.com/PlatformFramework" />
                 </CaseStructure.Case>
                 <CaseStructure.Case Bounds="5 5 1455 600" Id="23" Pattern="Error">
                     <Wire Id="99" Joints="N(24:23) h(1061) v(50) N(25:23)" xmlns="http://www.ni.com/PlatformFramework" />
@@ -1399,6 +1418,14 @@
                     </Field2>
                 </Cluster>
             </p.DefaultValue>
+        </DataItem>
+        <DataItem CallDirection="Input" CallIndex="7" DataType="ComplexDouble[]" Id="2009" Name="symbol sent">
+            <p.DefaultValue>
+                <Array Lengths="0" />
+            </p.DefaultValue>
+        </DataItem>
+        <DataItem CallDirection="Output" CallIndex="15" DataType="Double" Id="2010" Name="mse out">
+            <p.DefaultValue>0x0</p.DefaultValue>
         </DataItem>
         <DataTypeReferenceTable xmlns="http://www.ni.com/PlatformFramework">
             <p.TypeReference TypeId="1785820191_0">

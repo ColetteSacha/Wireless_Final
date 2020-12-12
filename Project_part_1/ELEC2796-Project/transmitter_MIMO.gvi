@@ -18,7 +18,7 @@
                 </Canvas>
             </IconPanel>
         </Icon>
-        <ConnectorPane Height="70" Id="9" ListViewHeight="270" ListViewWidth="150" Width="80" xmlns="http://www.ni.com/PlatformFramework">
+        <ConnectorPane Height="70" Id="9" ListViewHeight="285" ListViewWidth="150" Width="80" xmlns="http://www.ni.com/PlatformFramework">
             <ConnectorPaneTerminal ListViewHotspot="0 155" Parameter="655" />
             <ConnectorPaneTerminal Hotspot="0 15" ListViewHotspot="0 125" Parameter="575" />
             <ConnectorPaneTerminal Hotspot="0 25" ListViewHotspot="150 65" Parameter="116" />
@@ -35,7 +35,7 @@
             <ConnectorPaneTerminal Hotspot="15 70" />
             <ConnectorPaneTerminal Hotspot="25 70" />
             <ConnectorPaneTerminal Hotspot="35 70" />
-            <ConnectorPaneTerminal Hotspot="80 55" />
+            <ConnectorPaneTerminal Hotspot="80 55" ListViewHotspot="150 275" Parameter="9175" />
             <ConnectorPaneTerminal Hotspot="0 55" />
             <ConnectorPaneTerminal Hotspot="45 0" />
             <ConnectorPaneTerminal Hotspot="45 70" />
@@ -90,6 +90,10 @@
                 <Label Id="6357" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]6354" Left="[float]5" Locked="[bool]True" Text="[string]Key Bit Sequence" Top="[float]0" />
                 <Label Id="6360" IsVisualChild="[bool]False" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]6353" Left="[float]1127" Locked="[bool]True" Text="[string]queue out" Top="[float]1422" />
             </Cluster>
+            <ArrayViewer ArrayElement="[UIModel]9178" Columns="[int]1" Dimensions="[int]1" ElementType="[Type]Double" Id="9177" IsFixedSize="[bool]False" Name="[string]Symbols sent" Orientation="[SMOrientation]Horizontal" Rows="[int]1" Value="{DataItemBinding Id=9175}" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+                <p.DefaultElementValue>0x0;0x0</p.DefaultElementValue>
+                <NumericText Height="[float]25" Id="9178" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" ValueType="[Type]ComplexDouble" Width="[float]60" />
+            </ArrayViewer>
         </FrontPanelUnplacedItems>
         <BlockDiagram Id="12">
             <DataAccessor Bounds="-200 335 40 15" DataItem="106" Id="14" Label="98">
@@ -223,7 +227,7 @@
                         <Terminal DataType="@-136323547_0" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
                     </DataAccessor>
                     <TextNode AttachedTo="6362" Bounds="683 520 55 16" Id="6363" Text="queue out" xmlns="http://www.ni.com/PlatformFramework" />
-                    <Wire Id="6366" Joints="N(9042:R0) N(9174:L0)" xmlns="http://www.ni.com/PlatformFramework" />
+                    <Wire Id="6366" Joints="N(9042:R0) h(20) B(1) N(9174:L0) B(1) v(-10) h(85) v(-20) h(-125) v(-20) N(9176:Value)" xmlns="http://www.ni.com/PlatformFramework" />
                     <Wire Id="6399" Joints="N(9082:B0) v(115) h(50) N(451:B0)" xmlns="http://www.ni.com/PlatformFramework" />
                     <Wire Id="8974" Joints="N(9174:R1) h(62) B(1) N(9082:L1) B(1) v(-180) N(3649:L2)" xmlns="http://www.ni.com/PlatformFramework" />
                     <Wire Id="9024" Joints="N(9082:R1) N(9043:L1)" xmlns="http://www.ni.com/PlatformFramework" />
@@ -395,6 +399,10 @@
                         <Terminal DataType="ComplexDouble[]" Direction="Output" Hotspot="40 15" Id="R1" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
                         <Terminal DataType="Error" Direction="Output" Hotspot="40 35" Id="R3" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
                     </MethodCall>
+                    <DataAccessor Bounds="303 360 40 15" DataItem="9175" Id="9176" Label="9179">
+                        <Terminal DataType="ComplexDouble[]" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+                    </DataAccessor>
+                    <TextNode AttachedTo="9176" Bounds="348 360 70 16" Id="9179" Text="Symbols sent" xmlns="http://www.ni.com/PlatformFramework" />
                 </CaseStructure.Case>
                 <CaseStructure.Case Bounds="5 5 1335 580" Id="22" Pattern="Error">
                     <Wire Id="89" Joints="N(23:22) h(1322) v(95) N(24:22)" xmlns="http://www.ni.com/PlatformFramework" />
@@ -5895,6 +5903,11 @@
                         </Array>
                     </Field2>
                 </Cluster>
+            </p.DefaultValue>
+        </DataItem>
+        <DataItem AdaptToDiagramType="True" CallDirection="Output" CallIndex="4" DataType="ComplexDouble[]" Id="9175" Name="Symbols sent">
+            <p.DefaultValue>
+                <Array Lengths="0" />
             </p.DefaultValue>
         </DataItem>
         <DataTypeReferenceTable xmlns="http://www.ni.com/PlatformFramework">
