@@ -1,8 +1,4 @@
-1) revoir la courbe Rayleigh
-2) voir avec charles pour nos question (voir pq en perfect csi on arrive pas au mm point en bas SNR)
 3) aller plus loins sur les courbes BER
 4) calcule graphiquement le array gain et diversity gain
 5) savoir répondre aux questions du moodle
-6) Compare the performance of the systems implemented in parts I and II for a given frequency
-selective channel
-7)
+-implementer le deuxièeme ofdm alamouti
