@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile xmlns="http://www.ni.com/PlatformFramework">
+    <SourceModelFeatureSet>
+        <ParsableNamespace AssemblyFileVersion="3.0.0.56744" FeatureSetName="LabVIEW Virtual Instrument" MinimumParsableVersion="3.0.0.0" MinimumSemanticallyEquivalentVersion="3.0.0.0" Name="http://www.ni.com/LabVIEW.VI" Version="3.0.0.49154" />
+        <ParsableNamespace AssemblyFileVersion="3.0.0.56744" FeatureSetName="Editor" MinimumParsableVersion="3.0.0.0" MinimumSemanticallyEquivalentVersion="3.0.0.0" Name="http://www.ni.com/PlatformFramework" Version="3.0.0.49152" />
+        <ParsableNamespace AssemblyFileVersion="3.0.0.56744" FeatureSetName="LabVIEW Controls" MinimumParsableVersion="3.0.0.0" MinimumSemanticallyEquivalentVersion="3.0.0.0" Name="http://www.ni.com/Controls.LabVIEW.Design" Version="3.0.0.49152" />
+    </SourceModelFeatureSet>
+    <VirtualInstrument Id="1" xmlns="http://www.ni.com/LabVIEW.VI">
+        <Icon Id="417" ListViewIconCrop="0 0 40 40" xmlns="http://www.ni.com/PlatformFramework">
+            <IconPanel Height="[float]40" Id="418" Width="[float]40">
+                <IconTemplate Id="669" TemplateName="Blank" />
+                <Canvas Background="[SMSolidColorBrush]#00ffffff" ClipToBounds="[bool]True" Id="422" Margin="[SMThickness]0,0,0,0">
+                    <Rectangle EditMode="[ShapeEditMode]EditablePath" Fill="[SMSolidColorBrush]#ffffffff" Height="[float]40" Id="647" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" Stroke="[SMSolidColorBrush]#ff000000" StrokeThickness="[float]1" Top="[float]0" Width="[float]40" />
+                    <Rectangle EditMode="[ShapeEditMode]EditablePath" Fill="[SMSolidColorBrush]#ff646464" Height="[float]13" Id="648" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" Stroke="[SMSolidColorBrush]#ff000000" StrokeThickness="[float]1" Top="[float]0" Width="[float]40" />
+                    <Text Font="[SMFont]0,6," Foreground="[SMColor]#ffffffff" Id="649" Left="[float]2" Text="[string]  Student" TextWrapping="[TextWrapping]NoWrap" Top="[float]1" />
+                    <Text Font="[SMFont]0,6," Id="650" Left="[float]7" Text="[string]    TS" TextWrapping="[TextWrapping]NoWrap" Top="[float]14" />
+                    <Text Font="[SMFont]0,6," Id="651" Left="[float]8" Text="[string]preproc" TextWrapping="[TextWrapping]NoWrap" Top="[float]23" />
+                </Canvas>
+            </IconPanel>
+        </Icon>
+        <ConnectorPane Height="40" Id="9" ListViewHeight="60" ListViewWidth="150" Width="40" xmlns="http://www.ni.com/PlatformFramework">
+            <ConnectorPaneTerminal />
+            <ConnectorPaneTerminal Hotspot="0 15" />
+            <ConnectorPaneTerminal Hotspot="0 25" />
+            <ConnectorPaneTerminal Hotspot="15 0" />
+            <ConnectorPaneTerminal Hotspot="40 5" />
+            <ConnectorPaneTerminal Hotspot="40 15" />
+            <ConnectorPaneTerminal Hotspot="40 25" />
+            <ConnectorPaneTerminal Hotspot="15 40" />
+            <ConnectorPaneTerminal Hotspot="0 35" />
+            <ConnectorPaneTerminal Hotspot="25 0" />
+            <ConnectorPaneTerminal Hotspot="40 35" />
+            <ConnectorPaneTerminal Hotspot="25 40" />
+        </ConnectorPane>
+        <MethodDocumentation xmlns="http://www.ni.com/PlatformFramework" />
+        <DiagramUnplacedItems Id="10" />
+        <FrontPanelUnplacedItems Id="11">
+            <Cluster BaseName="[string]Cluster" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]@-2013166653_0" Height="[float]174" Id="1024" Label="[UIModel]1031" Left="[float]68" Top="[float]1541" Value="{DataItemBinding Id=1023}" Width="[float]839">
+                <ArrayViewer ArrayElement="[UIModel]1029" BaseName="[string]Array" Columns="[int]11" Dimensions="[int]1" Height="[float]36" Id="1025" Label="[UIModel]1026" Left="[float]18" Orientation="[SMOrientation]Horizontal" Rows="[int]1" Top="[float]49" Value="{ClusterBinding FieldName=Length\ 11\ Zadoff\ Chu\ 1\ }" Width="[float]784" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+                    <p.DefaultElementValue>0x0;0x0</p.DefaultElementValue>
+                    <NumericText BaseName="[string]Numeric" Height="[float]22" Id="1029" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Left="[float]185" Name="[string]Child" RadixVisibility="[SMVisibility]Collapsed" Top="[float]7" Value="[ComplexDouble]1 + 0i" ValueType="[Type]ComplexDouble" Width="[float]64" />
+                </ArrayViewer>
+                <Label Id="1026" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]1025" Left="[float]18" Locked="[bool]True" Text="[string]Length 11 Zadoff Chu 1 " Top="[float]26" />
+                <ArrayViewer ArrayElement="[UIModel]1030" BaseName="[string]Array" Columns="[int]11" Dimensions="[int]1" Height="[float]36" Id="1027" Label="[UIModel]1028" Left="[float]18" Orientation="[SMOrientation]Horizontal" Rows="[int]1" Top="[float]111" Value="{ClusterBinding FieldName=Length\ 11\ Zadoff\ Chu\ 2}" Width="[float]784" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+                    <p.DefaultElementValue>0x0;0x0</p.DefaultElementValue>
+                    <NumericText BaseName="[string]Numeric" Height="[float]22" Id="1030" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Left="[float]185" Name="[string]Child" RadixVisibility="[SMVisibility]Collapsed" Top="[float]7" Value="[ComplexDouble]1 + 0i" ValueType="[Type]ComplexDouble" Width="[float]64" />
+                </ArrayViewer>
+                <Label Id="1028" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]1027" Left="[float]18" Locked="[bool]True" Text="[string]Length 11 Zadoff Chu 2" Top="[float]88" />
+            </Cluster>
+            <Label Id="1031" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]1024" Left="[float]68" Locked="[bool]True" Text="[string]Training Sequences in" Top="[float]1518" />
+            <Cluster BaseName="[string]Cluster" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]@-2013166653_0" Height="[float]174" Id="1043" Label="[UIModel]1050" Left="[float]68" Top="[float]1541" Value="{DataItemBinding Id=1042}" Width="[float]839">
+                <ArrayViewer ArrayElement="[UIModel]1048" BaseName="[string]Array" Columns="[int]11" Dimensions="[int]1" Height="[float]36" Id="1044" Label="[UIModel]1045" Left="[float]18" Orientation="[SMOrientation]Horizontal" Rows="[int]1" Top="[float]49" Value="{ClusterBinding FieldName=Length\ 11\ Zadoff\ Chu\ 1\ }" Width="[float]784" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+                    <p.DefaultElementValue>0x0;0x0</p.DefaultElementValue>
+                    <NumericText BaseName="[string]Numeric" Height="[float]22" Id="1048" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Left="[float]185" Name="[string]Child" RadixVisibility="[SMVisibility]Collapsed" Top="[float]7" Value="[ComplexDouble]1 + 0i" ValueType="[Type]ComplexDouble" Width="[float]64" />
+                </ArrayViewer>
+                <Label Id="1045" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]1044" Left="[float]18" Locked="[bool]True" Text="[string]Length 11 Zadoff Chu 1 " Top="[float]26" />
+                <ArrayViewer ArrayElement="[UIModel]1049" BaseName="[string]Array" Columns="[int]11" Dimensions="[int]1" Height="[float]36" Id="1046" Label="[UIModel]1047" Left="[float]18" Orientation="[SMOrientation]Horizontal" Rows="[int]1" Top="[float]111" Value="{ClusterBinding FieldName=Length\ 11\ Zadoff\ Chu\ 2}" Width="[float]784" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+                    <p.DefaultElementValue>0x0;0x0</p.DefaultElementValue>
+                    <NumericText BaseName="[string]Numeric" Height="[float]22" Id="1049" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Left="[float]185" Name="[string]Child" RadixVisibility="[SMVisibility]Collapsed" Top="[float]7" Value="[ComplexDouble]1 + 0i" ValueType="[Type]ComplexDouble" Width="[float]64" />
+                </ArrayViewer>
+                <Label Id="1047" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]1046" Left="[float]18" Locked="[bool]True" Text="[string]Length 11 Zadoff Chu 2" Top="[float]88" />
+            </Cluster>
+            <Label Id="1050" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]1043" Left="[float]68" Locked="[bool]True" Text="[string]Training Sequences out" Top="[float]1518" />
+            <Cluster BaseName="[string]Error In" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]Error" Height="[float]165" Id="1055" Label="[UIModel]1062" Left="[float]170" Top="[float]291" Value="{DataItemBinding Id=1054}" Width="[float]138">
+                <LVCheckBox Content="[string]" ContentVisibility="[Visibility]Collapsed" Height="[float]17" Id="1056" Label="[UIModel]1057" Left="[float]5" Top="[float]25" Value="{ClusterBinding FieldName=status}" Width="[float]19" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+                <Label Id="1057" LabelOwner="[UIModel]1056" Left="[float]5" Locked="[bool]True" Text="[string]status" Top="[float]5" />
+                <NumericText Height="[float]22" Id="1058" Label="[UIModel]1059" Left="[float]50" Top="[float]25" Value="{ClusterBinding FieldName=code}" ValueType="[Type]Int32" Width="[float]75" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+                <Label Id="1059" LabelOwner="[UIModel]1058" Left="[float]50" Locked="[bool]True" Text="[string]code" Top="[float]5" />
+                <StringControl AcceptsReturn="[bool]True" Height="[float]80" HorizontalScrollBarVisibility="[ScrollBarVisibility]Auto" Id="1060" IsReadOnly="[bool]False" Label="[UIModel]1061" Left="[float]5" Text="{ClusterBinding FieldName=source}" Top="[float]72" VerticalScrollBarVisibility="[ScrollBarVisibility]Auto" Width="[float]120" WordWrap="[bool]True" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+                <Label Id="1061" LabelOwner="[UIModel]1060" Left="[float]5" Locked="[bool]True" Text="[string]source" Top="[float]52" />
+            </Cluster>
+            <Label Id="1062" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]1055" Left="[float]170" Locked="[bool]True" Text="[string]error in (no error)" Top="[float]268" />
+            <Cluster BaseName="[string]Error Out" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]Error" Height="[float]165" Id="1066" Label="[UIModel]1073" Left="[float]347" Top="[float]291" Value="{DataItemBinding Id=1065}" Width="[float]138">
+                <LVCheckBox Content="[string]" ContentVisibility="[Visibility]Collapsed" Height="[float]17" Id="1067" IsReadOnly="[bool]True" Label="[UIModel]1068" Left="[float]5" Top="[float]25" Value="{ClusterBinding FieldName=status}" Width="[float]19" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+                <Label Id="1068" LabelOwner="[UIModel]1067" Left="[float]5" Locked="[bool]True" Text="[string]status" Top="[float]5" />
+                <NumericText Height="[float]22" Id="1069" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Label="[UIModel]1070" Left="[float]50" Top="[float]25" Value="{ClusterBinding FieldName=code}" ValueType="[Type]Int32" Width="[float]75" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+                <Label Id="1070" LabelOwner="[UIModel]1069" Left="[float]50" Locked="[bool]True" Text="[string]code" Top="[float]5" />
+                <StringControl AcceptsReturn="[bool]True" Height="[float]80" HorizontalScrollBarVisibility="[ScrollBarVisibility]Auto" Id="1071" IsReadOnly="[bool]True" Label="[UIModel]1072" Left="[float]5" Text="{ClusterBinding FieldName=source}" Top="[float]72" VerticalScrollBarVisibility="[ScrollBarVisibility]Auto" Width="[float]120" WordWrap="[bool]True" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+                <Label Id="1072" LabelOwner="[UIModel]1071" Left="[float]5" Locked="[bool]True" Text="[string]source" Top="[float]52" />
+            </Cluster>
+            <Label Id="1073" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]1066" Left="[float]347" Locked="[bool]True" Text="[string]error out" Top="[float]268" />
+        </FrontPanelUnplacedItems>
+        <BlockDiagram Id="12">
+            <DataAccessor Bounds="365 370 40 15" DataItem="1023" Id="1021" Label="1022">
+                <Terminal DataType="@-2013166653_0" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+            </DataAccessor>
+            <TextNode AttachedTo="1021" Bounds="245 370 115 16" Id="1022" Text="Training Sequences in" xmlns="http://www.ni.com/PlatformFramework" />
+            <DataAccessor Bounds="495 375 40 15" DataItem="1042" Id="1040" Label="1041">
+                <Terminal DataType="@-2013166653_0" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+            </DataAccessor>
+            <TextNode AttachedTo="1040" Bounds="540 375 123 16" Id="1041" Text="Training Sequences out" xmlns="http://www.ni.com/PlatformFramework" />
+            <DataAccessor Bounds="390 575 40 15" DataItem="1054" Id="1052" Label="1053">
+                <Terminal DataType="Error" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+            </DataAccessor>
+            <TextNode AttachedTo="1052" Bounds="292 575 93 16" Id="1053" Text="error in (no error)" xmlns="http://www.ni.com/PlatformFramework" />
+            <DataAccessor Bounds="475 575 40 15" DataItem="1065" Id="1063" Label="1064">
+                <Terminal DataType="Error" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+            </DataAccessor>
+            <TextNode AttachedTo="1063" Bounds="520 575 47 16" Id="1064" Text="error out" xmlns="http://www.ni.com/PlatformFramework" />
+        </BlockDiagram>
+        <CPFrontPanel Height="[float]1600" Id="13" Width="[float]2000" />
+        <DataItem DataType="@-2013166653_0" Id="1023" Name="Training Sequences in">
+            <p.DefaultValue>
+                <Cluster>
+                    <Field1>
+                        <Array Lengths="11">
+                            <Elements>0x3FF0000000000000;0x0,0x3FF0000000000000;0x0,0x3FF0000000000000;0x0,0x0;0x0,0x3FF0000000000000;0x0,0x3FF0000000000000;0x0,0x0;0x0,0x3FF0000000000000;0x0,0x0;0x0,0x0;0x0,0x0;0x0</Elements>
+                        </Array>
+                    </Field1>
+                    <Field2>
+                        <Array Lengths="11">
+                            <Elements>0x3FF0000000000000;0x0,0x0;0x0,0x3FF0000000000000;0x0,0x3FF0000000000000;0x0,0x0;0x0,0x3FF0000000000000;0x0,0x0;0x0,0x0;0x0,0x0;0x0,0x3FF0000000000000;0x0,0x3FF0000000000000;0x0</Elements>
+                        </Array>
+                    </Field2>
+                </Cluster>
+            </p.DefaultValue>
+        </DataItem>
+        <DataItem DataType="@-2013166653_0" Id="1042" Name="Training Sequences out">
+            <p.DefaultValue>
+                <Cluster>
+                    <Field1>
+                        <Array Lengths="11">
+                            <Elements>0x3FF0000000000000;0x0,0x3FF0000000000000;0x0,0x3FF0000000000000;0x0,0x0;0x0,0x3FF0000000000000;0x0,0x3FF0000000000000;0x0,0x0;0x0,0x3FF0000000000000;0x0,0x0;0x0,0x0;0x0,0x0;0x0</Elements>
+                        </Array>
+                    </Field1>
+                    <Field2>
+                        <Array Lengths="11">
+                            <Elements>0x3FF0000000000000;0x0,0x0;0x0,0x3FF0000000000000;0x0,0x3FF0000000000000;0x0,0x0;0x0,0x3FF0000000000000;0x0,0x0;0x0,0x0;0x0,0x0;0x0,0x3FF0000000000000;0x0,0x3FF0000000000000;0x0</Elements>
+                        </Array>
+                    </Field2>
+                </Cluster>
+            </p.DefaultValue>
+        </DataItem>
+        <DataItem DataType="Error" Id="1054" Name="error in (no error)">
+            <p.DefaultValue>
+                <Cluster>
+                    <Field1>False</Field1>
+                    <Field2>0</Field2>
+                    <Field3>""</Field3>
+                </Cluster>
+            </p.DefaultValue>
+        </DataItem>
+        <DataItem DataType="Error" Id="1065" Name="error out">
+            <p.DefaultValue>
+                <Cluster>
+                    <Field1>False</Field1>
+                    <Field2>0</Field2>
+                    <Field3>""</Field3>
+                </Cluster>
+            </p.DefaultValue>
+        </DataItem>
+        <DataTypeReferenceTable xmlns="http://www.ni.com/PlatformFramework">
+            <p.TypeReference TypeId="-2013166653_0">
+                <Class Id="1" Name="" Cluster="">
+                    <ClosedGenericParameters />
+                    <GenericTypeDefinition>
+                        <Void />
+                    </GenericTypeDefinition>
+                    <BaseType>
+                        <Void />
+                    </BaseType>
+                    <Interfaces />
+                    <Members>
+                        <Field FieldAccessPolicy="ReadWrite" Name="Length 11 Zadoff Chu 1 ">
+                            <DataType>
+                                <VariableArray>
+                                    <DereferenceType>
+                                        <ComplexDouble />
+                                    </DereferenceType>
+                                </VariableArray>
+                            </DataType>
+                        </Field>
+                        <Field FieldAccessPolicy="ReadWrite" Name="Length 11 Zadoff Chu 2">
+                            <DataType>
+                                <VariableArray>
+                                    <DereferenceType>
+                                        <ComplexDouble />
+                                    </DereferenceType>
+                                </VariableArray>
+                            </DataType>
+                        </Field>
+                    </Members>
+                </Class>
+            </p.TypeReference>
+        </DataTypeReferenceTable>
+    </VirtualInstrument>
+</SourceFile>

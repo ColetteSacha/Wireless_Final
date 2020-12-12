@@ -1,0 +1,646 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile xmlns="http://www.ni.com/PlatformFramework">
+    <SourceModelFeatureSet>
+        <ParsableNamespace AssemblyFileVersion="3.0.0.56744" FeatureSetName="LabVIEW Virtual Instrument" MinimumParsableVersion="3.0.0.0" MinimumSemanticallyEquivalentVersion="3.0.0.0" Name="http://www.ni.com/LabVIEW.VI" Version="3.0.0.49154" />
+        <ParsableNamespace AssemblyFileVersion="3.0.0.56744" FeatureSetName="Editor" MinimumParsableVersion="3.0.0.0" MinimumSemanticallyEquivalentVersion="3.0.0.0" Name="http://www.ni.com/PlatformFramework" Version="3.0.0.49152" />
+        <ParsableNamespace AssemblyFileVersion="3.0.0.56744" FeatureSetName="LabVIEW Controls" MinimumParsableVersion="3.0.0.0" MinimumSemanticallyEquivalentVersion="3.0.0.0" Name="http://www.ni.com/Controls.LabVIEW.Design" Version="3.0.0.49152" />
+    </SourceModelFeatureSet>
+    <VirtualInstrument Id="1" xmlns="http://www.ni.com/LabVIEW.VI">
+        <Icon Id="2" ListViewIconCrop="0 0 50 50" xmlns="http://www.ni.com/PlatformFramework">
+            <IconPanel Height="[float]50" Id="3" Width="[float]50">
+                <IconTemplate ClipMargin="[SMThickness]3,3,3,3" Id="4" TemplateName="Gray">
+                    <Rectangle Fill="[SMSolidColorBrush]#ff727272" Id="5" IsHitTestVisible="[bool]False" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" />
+                    <Rectangle Fill="[SMSolidColorBrush]#ffe5e5e5" Id="6" IsHitTestVisible="[bool]False" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#fff2f2f2" />
+                    <FileNameText FileNameText="[bool]True" Font="[SMFont]0,11.25," HorizontalAlignment="[HorizontalAlignment]Left" Id="7" Margin="[SMThickness]2,2,2,2" SizeMode="[TextModelSizeMode]AutoFont" Text="[string]MRC-TX" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" VerticalAlignment="[VerticalAlignment]Top" />
+                </IconTemplate>
+                <Canvas Background="[SMSolidColorBrush]#00ffffff" ClipToBounds="[bool]True" Id="8" Margin="[SMThickness]3,3,3,3" />
+            </IconPanel>
+        </Icon>
+        <ConnectorPane Height="50" Id="9" ListViewHeight="135" ListViewWidth="150" Width="50" xmlns="http://www.ni.com/PlatformFramework">
+            <ConnectorPaneTerminal />
+            <ConnectorPaneTerminal Hotspot="0 15" ListViewHotspot="0 35" Parameter="33" />
+            <ConnectorPaneTerminal Hotspot="0 25" ListViewHotspot="0 50" Parameter="31" />
+            <ConnectorPaneTerminal Hotspot="0 35" />
+            <ConnectorPaneTerminal Hotspot="0 45" ListViewHotspot="0 65" Parameter="29" />
+            <ConnectorPaneTerminal Hotspot="15 0" />
+            <ConnectorPaneTerminal Hotspot="25 0" />
+            <ConnectorPaneTerminal Hotspot="35 0" />
+            <ConnectorPaneTerminal Hotspot="50 5" ListViewHotspot="150 125" Parameter="138" />
+            <ConnectorPaneTerminal Hotspot="50 15" ListViewHotspot="150 110" Parameter="144" />
+            <ConnectorPaneTerminal Hotspot="50 25" ListViewHotspot="150 95" Parameter="32" />
+            <ConnectorPaneTerminal Hotspot="50 35" />
+            <ConnectorPaneTerminal Hotspot="50 45" ListViewHotspot="150 80" Parameter="30" />
+            <ConnectorPaneTerminal Hotspot="15 50" />
+            <ConnectorPaneTerminal Hotspot="25 50" />
+            <ConnectorPaneTerminal Hotspot="35 50" />
+        </ConnectorPane>
+        <MethodDocumentation xmlns="http://www.ni.com/PlatformFramework" />
+        <DiagramUnplacedItems Id="10" />
+        <FrontPanelUnplacedItems Id="11">
+            <Cluster BaseName="[string]Error In" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]Error" Height="[float]165" Id="34" Label="[UIModel]41" Left="[float]245" Top="[float]340" Value="{DataItemBinding Id=29}" Width="[float]368">
+                <LVCheckBox Content="[string]" ContentVisibility="[Visibility]Collapsed" Height="[float]17" Id="35" Label="[UIModel]36" Left="[float]5" Top="[float]25" Value="{ClusterBinding FieldName=status}" Width="[float]19" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+                <Label Id="36" LabelOwner="[UIModel]35" Left="[float]5" Locked="[bool]True" Text="[string]status" Top="[float]5" />
+                <NumericText Height="[float]22" Id="37" Label="[UIModel]38" Left="[float]50" Top="[float]25" Value="{ClusterBinding FieldName=code}" ValueType="[Type]Int32" Width="[float]75" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+                <Label Id="38" LabelOwner="[UIModel]37" Left="[float]50" Locked="[bool]True" Text="[string]code" Top="[float]5" />
+                <StringControl AcceptsReturn="[bool]True" Height="[float]93" HorizontalScrollBarVisibility="[ScrollBarVisibility]Auto" Id="39" IsReadOnly="[bool]False" Label="[UIModel]40" Left="[float]5" Text="{ClusterBinding FieldName=source}" Top="[float]59" VerticalScrollBarVisibility="[ScrollBarVisibility]Auto" Width="[float]350" WordWrap="[bool]True" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+                <Label Id="40" LabelOwner="[UIModel]39" Left="[float]5" Locked="[bool]True" Text="[string]source" Top="[float]36" />
+            </Cluster>
+            <Label Id="41" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]34" Left="[float]245" Locked="[bool]True" Text="[string]error in (no error)" Top="[float]317" />
+            <Cluster BaseName="[string]Error Out" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]Error" Height="[float]170" Id="42" Label="[UIModel]49" Left="[float]242" Top="[float]541" Value="{DataItemBinding Id=30}" Width="[float]373">
+                <LVCheckBox Content="[string]" ContentVisibility="[Visibility]Collapsed" Height="[float]17" Id="43" IsReadOnly="[bool]True" Label="[UIModel]44" Left="[float]5" Top="[float]25" Value="{ClusterBinding FieldName=status}" Width="[float]19" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+                <Label Id="44" LabelOwner="[UIModel]43" Left="[float]5" Locked="[bool]True" Text="[string]status" Top="[float]5" />
+                <NumericText Height="[float]22" Id="45" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Label="[UIModel]46" Left="[float]50" Top="[float]25" Value="{ClusterBinding FieldName=code}" ValueType="[Type]Int32" Width="[float]75" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+                <Label Id="46" LabelOwner="[UIModel]45" Left="[float]50" Locked="[bool]True" Text="[string]code" Top="[float]5" />
+                <StringControl AcceptsReturn="[bool]True" Height="[float]86" HorizontalScrollBarVisibility="[ScrollBarVisibility]Auto" Id="47" IsReadOnly="[bool]True" Label="[UIModel]48" Left="[float]5" Text="{ClusterBinding FieldName=source}" Top="[float]71" VerticalScrollBarVisibility="[ScrollBarVisibility]Auto" Width="[float]355" WordWrap="[bool]True" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+                <Label Id="48" LabelOwner="[UIModel]47" Left="[float]5" Locked="[bool]True" Text="[string]source" Top="[float]48" />
+            </Cluster>
+            <Label Id="49" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]42" Left="[float]242" Locked="[bool]True" Text="[string]error out" Top="[float]518" />
+            <Cluster AutoArrange="[AutoArrange]None" BaseName="[string]Cluster" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]@-1596811593_0" Height="[float]374" Id="50" Label="[UIModel]90" Left="[float]985" Top="[float]103" Value="{DataItemBinding Id=31}" Width="[float]409">
+                <Cluster AutoArrange="[AutoArrange]ArrangeVertically" BaseName="[string]Cluster" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]@-1963530914_0" Height="[float]192" Id="51" Label="[UIModel]55" Left="[float]8" Top="[float]86" Value="{ClusterBinding FieldName=Pulse\ Shaping\ Parameters}" Width="[float]140">
+                    <EnumSelector AllowUndefinedValueEntry="[bool]False" BaseName="[string]Enum" Height="[float]22" Id="63" InteractionMode="[SelectorInteractionModes]ArrowKeys, Keyboard, MouseClick, ScrollWheel, ButtonClicks" IsTypeAheadEnabled="[bool]True" Label="[UIModel]67" Left="[float]5" Top="[float]25" Value="{ClusterBinding FieldName=Modulation\ Type}" ValueType="[Type]UInt16" VisualMode="[SelectorVisualMode]RingStyle" Width="[float]117" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+                        <EnumSelectorInfo DisplayValue="[string]FSK" Id="77" Value="[ushort]0" ValueType="[Type]UInt16" />
+                        <EnumSelectorInfo DisplayValue="[string]PSK" Id="78" Value="[ushort]1" ValueType="[Type]UInt16" />
+                        <EnumSelectorInfo DisplayValue="[string]QAM" Id="79" Value="[ushort]2" ValueType="[Type]UInt16" />
+                        <EnumSelectorInfo DisplayValue="[string]MSK" Id="80" Value="[ushort]3" ValueType="[Type]UInt16" />
+                        <EnumSelectorInfo DisplayValue="[string]PAM" Id="81" Value="[ushort]4" ValueType="[Type]UInt16" />
+                        <EnumSelectorInfo DisplayValue="[string]ASK" Id="82" Value="[ushort]5" ValueType="[Type]UInt16" />
+                    </EnumSelector>
+                    <EnumSelector AllowUndefinedValueEntry="[bool]False" BaseName="[string]Enum" Height="[float]22" Id="64" InteractionMode="[SelectorInteractionModes]ArrowKeys, Keyboard, MouseClick, ScrollWheel, ButtonClicks" IsTypeAheadEnabled="[bool]True" Label="[UIModel]68" Left="[float]5" Top="[float]70" Value="{ClusterBinding FieldName=Pulse\ Shaping\ Filter}" ValueType="[Type]UInt16" VisualMode="[SelectorVisualMode]RingStyle" Width="[float]117" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+                        <EnumSelectorInfo DisplayValue="[string]none" Id="83" Value="[ushort]0" ValueType="[Type]UInt16" />
+                        <EnumSelectorInfo DisplayValue="[string]Raised Cosine" Id="84" Value="[ushort]1" ValueType="[Type]UInt16" />
+                        <EnumSelectorInfo DisplayValue="[string]Root Raised Cos" Id="85" Value="[ushort]2" ValueType="[Type]UInt16" />
+                        <EnumSelectorInfo DisplayValue="[string]Gaussian" Id="86" Value="[ushort]3" ValueType="[Type]UInt16" />
+                    </EnumSelector>
+                    <NumericText BaseName="[string]Numeric" Height="[float]22" Id="65" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Label="[UIModel]69" Left="[float]5" RadixVisibility="[SMVisibility]Collapsed" Top="[float]115" Value="{ClusterBinding FieldName=Filter\ Parameter}" ValueFormatter="[string]LV:G6" ValueType="[Type]Double" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+                    <NumericText BaseName="[string]Numeric" Height="[float]22" Id="66" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Label="[UIModel]70" Left="[float]5" Top="[float]160" Value="{ClusterBinding FieldName=Filter\ Length\ (Symbols)}" ValueType="[Type]Int32" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+                    <Label Id="67" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]63" Left="[float]5" Locked="[bool]True" Text="[string]Modulation Type" Top="[float]2" />
+                    <Label Id="68" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]64" Left="[float]5" Locked="[bool]True" Text="[string]Pulse Shaping Filter" Top="[float]47" />
+                    <Label Id="69" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]65" Left="[float]5" Locked="[bool]True" Text="[string]Filter Parameter" Top="[float]92" />
+                    <Label Id="70" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]66" Left="[float]5" Locked="[bool]True" Text="[string]Filter Length (Symbols)" Top="[float]137" />
+                </Cluster>
+                <NumericText BaseName="[string]Numeric" Height="[float]22" Id="52" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Label="[UIModel]56" Left="[float]165" Top="[float]29" Value="{ClusterBinding FieldName=TX\ Oversample\ Factor}" ValueType="[Type]Int32" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+                <NumericText BaseName="[string]Numeric" Height="[float]22" Id="53" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Label="[UIModel]57" Left="[float]165" Top="[float]78" Value="{ClusterBinding FieldName=Packet\ Length\ (Bits)}" ValueType="[Type]Int32" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+                <NumericText BaseName="[string]Numeric" Height="[float]22" Id="54" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Label="[UIModel]58" Left="[float]165" RadixVisibility="[SMVisibility]Collapsed" Top="[float]125" Value="{ClusterBinding FieldName=TX\ Sample\ Rate}" ValueFormatter="[string]LV:G6" ValueType="[Type]Double" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+                <Label Id="55" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]51" Left="[float]8" Locked="[bool]True" Text="[string]Pulse Shaping Parameters" Top="[float]63" />
+                <Label Id="56" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]52" Left="[float]165" Locked="[bool]True" Text="[string]TX Oversample Factor" Top="[float]6" />
+                <Label Id="57" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]53" Left="[float]165" Locked="[bool]True" Text="[string]Packet Length (Bits)" Top="[float]55" />
+                <Label Id="58" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]54" Left="[float]165" Locked="[bool]True" Text="[string]TX Sample Rate" Top="[float]102" />
+                <ComboboxSelector AllowDifferentText="[bool]False" AllowUndefinedValueEntry="[bool]True" BaseName="[string]Combo Box" Height="[float]22" Id="59" IsTypeAheadEnabled="[bool]True" Label="[UIModel]60" Left="[float]8" Top="[float]29" Value="{ClusterBinding FieldName=Modulation\ Type}" ValueType="[Type]String" VisualMode="[SelectorVisualMode]ComboBoxStyle" Width="[float]90" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+                    <ComboboxSelectorInfo DisplayValue="[string]BPSK" Id="71" IsEnabled="[bool]True" Value="[string]BPSK" ValueType="[Type]String" />
+                    <ComboboxSelectorInfo DisplayValue="[string]QPSK" Id="72" IsEnabled="[bool]True" Value="[string]QPSK" ValueType="[Type]String" />
+                </ComboboxSelector>
+                <Label Id="60" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]59" Left="[float]8" Locked="[bool]True" Text="[string]Modulation Type" Top="[float]6" Visible="[bool]True" />
+                <Cluster AutoArrange="[AutoArrange]ArrangeVertically" BaseName="[string]Cluster" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]@-356203670_0" Height="[float]102" Id="61" Label="[UIModel]62" Left="[float]165" Top="[float]190" Value="{ClusterBinding FieldName=Control\ Information\ For\ Packet\ Header/Tail}" Width="[float]206">
+                    <ComboboxSelector AllowDifferentText="[bool]False" AllowUndefinedValueEntry="[bool]True" BaseName="[string]Combo Box" Height="[float]22" Id="73" InteractionMode="[SelectorInteractionModes]ArrowKeys, Keyboard, MouseClick, ScrollWheel, ButtonClicks" IsTypeAheadEnabled="[bool]True" Label="[UIModel]74" Left="[float]5" Top="[float]25" Value="{ClusterBinding FieldName=Training\ Sequences}" ValueType="[Type]String" VisualMode="[SelectorVisualMode]ComboBoxStyle" Width="[float]183" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+                        <ComboboxSelectorInfo DisplayValue="[string]Length 11 Barker Sequence" Id="87" IsEnabled="[bool]True" Value="[string]Length 11 Barker Sequence" ValueType="[Type]String" />
+                        <ComboboxSelectorInfo DisplayValue="[string]Length 16 Barker Sequence" Id="88" IsEnabled="[bool]True" Value="[string]Length 16 Barker Sequence" ValueType="[Type]String" />
+                        <ComboboxSelectorInfo DisplayValue="[string]Neumann Hoffman Binary" Id="89" IsEnabled="[bool]True" Value="[string]Neumann Hoffman Binary" ValueType="[Type]String" />
+                    </ComboboxSelector>
+                    <Label Id="74" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]73" Left="[float]5" Locked="[bool]True" Text="[string]Training Sequences" Top="[float]2" Visible="[bool]True" />
+                    <NumericText BaseName="[string]Numeric" Height="[float]22" Id="75" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Label="[UIModel]76" Left="[float]5" Top="[float]70" Value="{ClusterBinding FieldName=Zero\ Pad\ Length}" ValueType="[Type]Int32" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+                    <Label Id="76" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]75" Left="[float]5" Locked="[bool]True" Text="[string]Zero Pad Length" Top="[float]47" Visible="[bool]True" />
+                </Cluster>
+                <Label Id="62" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]61" Left="[float]165" Locked="[bool]True" Text="[string]Control Information For Packet Header/Tail" Top="[float]167" />
+            </Cluster>
+            <Label Id="90" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]50" Left="[float]985" Locked="[bool]True" Text="[string]Modulation Parameters In" Top="[float]80" />
+            <Cluster AutoArrange="[AutoArrange]None" BaseName="[string]Cluster" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]@384786743_0" Height="[float]376" Id="91" Label="[UIModel]131" Left="[float]984" Top="[float]504" Value="{DataItemBinding Id=32}" Width="[float]410">
+                <Cluster AutoArrange="[AutoArrange]ArrangeVertically" BaseName="[string]Cluster" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]@-1963530914_0" Height="[float]192" Id="92" Label="[UIModel]96" Left="[float]8" Top="[float]86" Value="{ClusterBinding FieldName=Pulse\ Shaping\ Parameters}" Width="[float]113">
+                    <EnumSelector AllowUndefinedValueEntry="[bool]False" BaseName="[string]Enum" Height="[float]22" Id="104" InteractionMode="[SelectorInteractionModes]ReadOnly" IsTypeAheadEnabled="[bool]True" Label="[UIModel]108" Left="[float]5" Top="[float]25" Value="{ClusterBinding FieldName=Modulation\ Type}" ValueType="[Type]UInt16" VisualMode="[SelectorVisualMode]RingStyle" Width="[float]90" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+                        <EnumSelectorInfo DisplayValue="[string]FSK" Id="118" Value="[ushort]0" ValueType="[Type]UInt16" />
+                        <EnumSelectorInfo DisplayValue="[string]PSK" Id="119" Value="[ushort]1" ValueType="[Type]UInt16" />
+                        <EnumSelectorInfo DisplayValue="[string]QAM" Id="120" Value="[ushort]2" ValueType="[Type]UInt16" />
+                        <EnumSelectorInfo DisplayValue="[string]MSK" Id="121" Value="[ushort]3" ValueType="[Type]UInt16" />
+                        <EnumSelectorInfo DisplayValue="[string]PAM" Id="122" Value="[ushort]4" ValueType="[Type]UInt16" />
+                        <EnumSelectorInfo DisplayValue="[string]ASK" Id="123" Value="[ushort]5" ValueType="[Type]UInt16" />
+                    </EnumSelector>
+                    <EnumSelector AllowUndefinedValueEntry="[bool]False" BaseName="[string]Enum" Height="[float]22" Id="105" InteractionMode="[SelectorInteractionModes]ReadOnly" IsTypeAheadEnabled="[bool]True" Label="[UIModel]109" Left="[float]5" Top="[float]70" Value="{ClusterBinding FieldName=Pulse\ Shaping\ Filter}" ValueType="[Type]UInt16" VisualMode="[SelectorVisualMode]RingStyle" Width="[float]90" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+                        <EnumSelectorInfo DisplayValue="[string]none" Id="124" Value="[ushort]0" ValueType="[Type]UInt16" />
+                        <EnumSelectorInfo DisplayValue="[string]Raised Cosine" Id="125" Value="[ushort]1" ValueType="[Type]UInt16" />
+                        <EnumSelectorInfo DisplayValue="[string]Root Raised Cos" Id="126" Value="[ushort]2" ValueType="[Type]UInt16" />
+                        <EnumSelectorInfo DisplayValue="[string]Gaussian" Id="127" Value="[ushort]3" ValueType="[Type]UInt16" />
+                    </EnumSelector>
+                    <NumericText BaseName="[string]Numeric" Height="[float]22" Id="106" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Label="[UIModel]110" Left="[float]5" RadixVisibility="[SMVisibility]Collapsed" Top="[float]115" Value="{ClusterBinding FieldName=Filter\ Parameter}" ValueFormatter="[string]LV:G6" ValueType="[Type]Double" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+                    <NumericText BaseName="[string]Numeric" Height="[float]22" Id="107" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Label="[UIModel]111" Left="[float]5" Top="[float]160" Value="{ClusterBinding FieldName=Filter\ Length\ (Symbols)}" ValueType="[Type]Int32" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+                    <Label Id="108" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]104" Left="[float]5" Locked="[bool]True" Text="[string]Modulation Type" Top="[float]2" />
+                    <Label Id="109" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]105" Left="[float]5" Locked="[bool]True" Text="[string]Pulse Shaping Filter" Top="[float]47" />
+                    <Label Id="110" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]106" Left="[float]5" Locked="[bool]True" Text="[string]Filter Parameter" Top="[float]92" />
+                    <Label Id="111" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]107" Left="[float]5" Locked="[bool]True" Text="[string]Filter Length (Symbols)" Top="[float]137" />
+                </Cluster>
+                <NumericText BaseName="[string]Numeric" Height="[float]22" Id="93" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Label="[UIModel]97" Left="[float]165" Top="[float]29" Value="{ClusterBinding FieldName=TX\ Oversample\ Factor}" ValueType="[Type]Int32" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+                <NumericText BaseName="[string]Numeric" Height="[float]22" Id="94" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Label="[UIModel]98" Left="[float]165" Top="[float]78" Value="{ClusterBinding FieldName=Packet\ Length\ (Bits)}" ValueType="[Type]Int32" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+                <NumericText BaseName="[string]Numeric" Height="[float]22" Id="95" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Label="[UIModel]99" Left="[float]165" RadixVisibility="[SMVisibility]Collapsed" Top="[float]125" Value="{ClusterBinding FieldName=TX\ Sample\ Rate}" ValueFormatter="[string]LV:G6" ValueType="[Type]Double" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+                <Label Id="96" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]92" Left="[float]8" Locked="[bool]True" Text="[string]Pulse Shaping Parameters" Top="[float]63" />
+                <Label Id="97" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]93" Left="[float]165" Locked="[bool]True" Text="[string]TX Oversample Factor" Top="[float]6" />
+                <Label Id="98" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]94" Left="[float]165" Locked="[bool]True" Text="[string]Packet Length (Bits)" Top="[float]55" />
+                <Label Id="99" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]95" Left="[float]165" Locked="[bool]True" Text="[string]TX Sample Rate" Top="[float]102" />
+                <ComboboxSelector AllowDifferentText="[bool]False" AllowUndefinedValueEntry="[bool]True" BaseName="[string]Combo Box" Height="[float]22" Id="100" InteractionMode="[SelectorInteractionModes]ReadOnly" IsTypeAheadEnabled="[bool]True" Label="[UIModel]101" Left="[float]8" Top="[float]29" Value="{ClusterBinding FieldName=Modulation\ Type}" ValueType="[Type]String" VisualMode="[SelectorVisualMode]ComboBoxStyle" Width="[float]90" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+                    <ComboboxSelectorInfo DisplayValue="[string]BPSK" Id="112" IsEnabled="[bool]True" Value="[string]BPSK" ValueType="[Type]String" />
+                    <ComboboxSelectorInfo DisplayValue="[string]QPSK" Id="113" IsEnabled="[bool]True" Value="[string]QPSK" ValueType="[Type]String" />
+                </ComboboxSelector>
+                <Label Id="101" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]100" Left="[float]8" Locked="[bool]True" Text="[string]Modulation Type" Top="[float]6" Visible="[bool]True" />
+                <Cluster AutoArrange="[AutoArrange]ArrangeVertically" BaseName="[string]Cluster" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]@512896490_0" Height="[float]102" Id="102" Label="[UIModel]103" Left="[float]158" Top="[float]188" Value="{ClusterBinding FieldName=Control\ Information\ For\ Packet\ Header/Tail}" Width="[float]206">
+                    <ComboboxSelector AllowDifferentText="[bool]False" AllowUndefinedValueEntry="[bool]True" BaseName="[string]Combo Box" Height="[float]22" Id="114" InteractionMode="[SelectorInteractionModes]ReadOnly" IsTypeAheadEnabled="[bool]True" Label="[UIModel]115" Left="[float]5" Top="[float]25" Value="{ClusterBinding FieldName=Training\ Sequences\ }" ValueType="[Type]String" VisualMode="[SelectorVisualMode]ComboBoxStyle" Width="[float]183" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+                        <ComboboxSelectorInfo DisplayValue="[string]Length 11 Barker Sequence" Id="128" IsEnabled="[bool]True" Value="[string]Length 11 Barker Sequence" ValueType="[Type]String" />
+                        <ComboboxSelectorInfo DisplayValue="[string]Length 16 Barker Sequence" Id="129" IsEnabled="[bool]True" Value="[string]Length 16 Barker Sequence" ValueType="[Type]String" />
+                        <ComboboxSelectorInfo DisplayValue="[string]Neumann Hoffman Binary" Id="130" IsEnabled="[bool]True" Value="[string]Neumann Hoffman Binary" ValueType="[Type]String" />
+                    </ComboboxSelector>
+                    <Label Id="115" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]114" Left="[float]5" Locked="[bool]True" Text="[string]Training Sequences " Top="[float]2" Visible="[bool]True" />
+                    <NumericText BaseName="[string]Numeric" Height="[float]22" Id="116" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Label="[UIModel]117" Left="[float]5" Top="[float]70" Value="{ClusterBinding FieldName=Zero\ Pad\ Length}" ValueType="[Type]Int32" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+                    <Label Id="117" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]116" Left="[float]5" Locked="[bool]True" Text="[string]Zero Pad Length" Top="[float]47" Visible="[bool]True" />
+                </Cluster>
+                <Label Id="103" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]102" Left="[float]158" Locked="[bool]True" Text="[string]Control Information For Packet Header/Tail" Top="[float]165" />
+            </Cluster>
+            <Label Id="131" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]91" Left="[float]984" Locked="[bool]True" Text="[string]Modulation Parameters Out" Top="[float]481" />
+            <ArrayViewer ArrayElement="[UIModel]133" BaseName="[string]Array" Columns="[int]4" Dimensions="[int]1" Height="[float]37" Id="132" Label="[UIModel]134" Left="[float]302" Orientation="[SMOrientation]Horizontal" Rows="[int]1" Top="[float]128" Value="{DataItemBinding Id=33}" Width="[float]283" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+                <p.DefaultElementValue>0x0;0x0</p.DefaultElementValue>
+                <NumericText BaseName="[string]Numeric" Height="[float]22" Id="133" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Left="[float]53" Name="[string]Child" RadixVisibility="[SMVisibility]Collapsed" Top="[float]7" Value="[ComplexDouble]1 + 0i" ValueType="[Type]ComplexDouble" Width="[float]54" />
+            </ArrayViewer>
+            <Label Id="134" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]132" Left="[float]302" Locked="[bool]True" Text="[string]input symbols " Top="[float]105" />
+            <ArrayViewer ArrayElement="[UIModel]140" BaseName="[string]Array" Columns="[int]4" Dimensions="[int]1" Height="[float]37" Id="139" Label="[UIModel]141" Left="[float]302" Orientation="[SMOrientation]Horizontal" Rows="[int]1" Top="[float]128" Value="{DataItemBinding Id=138}" Width="[float]283" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+                <p.DefaultElementValue>0x0;0x0</p.DefaultElementValue>
+                <NumericText BaseName="[string]Numeric" Height="[float]22" Id="140" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Left="[float]53" Name="[string]Child" RadixVisibility="[SMVisibility]Collapsed" Top="[float]7" Value="[ComplexDouble]1 + 0i" ValueType="[Type]ComplexDouble" Width="[float]54" />
+            </ArrayViewer>
+            <Label Id="141" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]139" Left="[float]302" Locked="[bool]True" Text="[string]input symbols " Top="[float]105" />
+            <ArrayViewer ArrayElement="[UIModel]146" BaseName="[string]Array" Columns="[int]4" Dimensions="[int]1" Height="[float]37" Id="145" Label="[UIModel]147" Left="[float]302" Orientation="[SMOrientation]Horizontal" Rows="[int]1" Top="[float]128" Value="{DataItemBinding Id=144}" Width="[float]283" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+                <p.DefaultElementValue>0x0;0x0</p.DefaultElementValue>
+                <NumericText BaseName="[string]Numeric" Height="[float]22" Id="146" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Left="[float]53" Name="[string]Child" RadixVisibility="[SMVisibility]Collapsed" Top="[float]7" Value="[ComplexDouble]1 + 0i" ValueType="[Type]ComplexDouble" Width="[float]54" />
+            </ArrayViewer>
+            <Label Id="147" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]145" Left="[float]302" Locked="[bool]True" Text="[string]output 2" Top="[float]105" />
+        </FrontPanelUnplacedItems>
+        <BlockDiagram Id="12">
+            <DataAccessor Bounds="-95 200 40 15" DataItem="29" Id="14" Label="24">
+                <Terminal DataType="Error" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+            </DataAccessor>
+            <DataAccessor Bounds="880 200 40 15" DataItem="30" Id="15" Label="25">
+                <Terminal DataType="Error" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+            </DataAccessor>
+            <CaseStructure Bounds="110 170 740 375" DataType="Error" Id="16" Selected="17" UserSelectorBounds="320 0 100.8 16.8">
+                <CaseStructure.Case Bounds="5 5 730 365" Id="17" Pattern="No Error">
+                    <Wire Id="150" Joints="N(149:17) h(666) B(1) h(49) v(-5) N(151:17) B(1) v(30) N(154:17)" xmlns="http://www.ni.com/PlatformFramework" />
+                </CaseStructure.Case>
+                <CaseStructure.Case Bounds="5 5 730 365" Id="18" Pattern="Error" />
+                <CaseStructure.Selector Bounds="-4 30 13 15" Docking="Left" Id="19" Terminals="16=23, 17, 18" />
+                <CaseStructure.Tunnel Bounds="-4 80 13 10" Docking="Left" Id="149" Terminals="16=148, 17=150, 18" />
+                <CaseStructure.Tunnel Bounds="731 75 13 10" DefaultIfUnwired="True" Docking="Right" Id="151" Terminals="16=152, 17=150, 18" />
+                <CaseStructure.Tunnel Bounds="731 110 13 10" DefaultIfUnwired="True" Docking="Right" Id="154" Terminals="16=153, 17=150, 18" />
+            </CaseStructure>
+            <DataAccessor Bounds="-85 505 40 15" DataItem="31" Id="20" Label="26">
+                <Terminal DataType="@-1596811593_0" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+            </DataAccessor>
+            <DataAccessor Bounds="880 505 40 15" DataItem="32" Id="21" Label="27">
+                <Terminal DataType="@384786743_0" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+            </DataAccessor>
+            <DataAccessor Bounds="-100 250 40 15" DataItem="33" Id="22" Label="28">
+                <Terminal DataType="ComplexDouble[]" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+            </DataAccessor>
+            <Wire Id="23" Joints="N(14:Value) h(156) B(1) N(19:16) B(1) v(-45) h(774) v(45) N(15:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+            <TextNode AttachedTo="14" Bounds="-193 200 93 16" Id="24" Text="error in (no error)" xmlns="http://www.ni.com/PlatformFramework" />
+            <TextNode AttachedTo="15" Bounds="925 200 47 16" Id="25" Text="error out" xmlns="http://www.ni.com/PlatformFramework" />
+            <TextNode AttachedTo="20" Bounds="-85 486 137 16" Id="26" Text="Modulation Parameters In" xmlns="http://www.ni.com/PlatformFramework" />
+            <TextNode AttachedTo="21" Bounds="880 486 147 16" Id="27" Text="Modulation Parameters Out" xmlns="http://www.ni.com/PlatformFramework" />
+            <TextNode AttachedTo="22" Bounds="-100 231 78 16" Id="28" Text="&quot;input symbols &quot;" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="135" Joints="N(20:Value) h(5) v(45) h(915) v(-45) N(21:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+            <DataAccessor Bounds="870 245 40 15" DataItem="138" Id="136" Label="137">
+                <Terminal DataType="ComplexDouble[]" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+            </DataAccessor>
+            <TextNode AttachedTo="136" Bounds="870 226 46 16" Id="137" Text="output 1" xmlns="http://www.ni.com/PlatformFramework" />
+            <DataAccessor Bounds="870 280 40 15" DataItem="144" Id="142" Label="143">
+                <Terminal DataType="ComplexDouble[]" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+            </DataAccessor>
+            <TextNode AttachedTo="142" Bounds="870 261 46 16" Id="143" Text="output 2" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="148" Joints="N(22:Value) N(149:16)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="152" Joints="N(151:16) N(136:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="153" Joints="N(154:16) N(142:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+        </BlockDiagram>
+        <CPFrontPanel Height="[float]1600" Id="13" Width="[float]2000" />
+        <DataItem CallDirection="Input" CallIndex="2" DataType="Error" Id="29" Name="error in (no error)">
+            <p.DefaultValue>
+                <Cluster>
+                    <Field1>False</Field1>
+                    <Field2>0</Field2>
+                    <Field3>""</Field3>
+                </Cluster>
+            </p.DefaultValue>
+        </DataItem>
+        <DataItem CallDirection="Output" CallIndex="0" DataType="Error" Id="30" Name="error out">
+            <p.DefaultValue>
+                <Cluster>
+                    <Field1>False</Field1>
+                    <Field2>0</Field2>
+                    <Field3>""</Field3>
+                </Cluster>
+            </p.DefaultValue>
+        </DataItem>
+        <DataItem CallDirection="Input" CallIndex="1" DataType="@-1596811593_0" Id="31" Name="Modulation Parameters In">
+            <p.DefaultValue>
+                <Cluster>
+                    <Field1>QPSK</Field1>
+                    <Field2>
+                        <Cluster>
+                            <Field1>1</Field1>
+                            <Field2>1</Field2>
+                            <Field3>0x3FE0000000000000</Field3>
+                            <Field4>8</Field4>
+                        </Cluster>
+                    </Field2>
+                    <Field3>20</Field3>
+                    <Field4>500</Field4>
+                    <Field5>0x4059000000000000</Field5>
+                    <Field6>
+                        <Cluster>
+                            <Field1>Length 11 Barker Sequence</Field1>
+                            <Field2>8</Field2>
+                        </Cluster>
+                    </Field6>
+                </Cluster>
+            </p.DefaultValue>
+        </DataItem>
+        <DataItem CallDirection="Output" CallIndex="1" DataType="@384786743_0" Id="32" Name="Modulation Parameters Out">
+            <p.DefaultValue>
+                <Cluster>
+                    <Field1>QPSK</Field1>
+                    <Field2>
+                        <Cluster>
+                            <Field1>1</Field1>
+                            <Field2>1</Field2>
+                            <Field3>0x3FE0000000000000</Field3>
+                            <Field4>8</Field4>
+                        </Cluster>
+                    </Field2>
+                    <Field3>20</Field3>
+                    <Field4>500</Field4>
+                    <Field5>0x4059000000000000</Field5>
+                    <Field6>
+                        <Cluster>
+                            <Field1>Length 11 Barker Sequence</Field1>
+                            <Field2>8</Field2>
+                        </Cluster>
+                    </Field6>
+                </Cluster>
+            </p.DefaultValue>
+        </DataItem>
+        <DataItem CallDirection="Input" CallIndex="0" DataType="ComplexDouble[]" Id="33" Name="&quot;input symbols &quot;">
+            <p.DefaultValue>
+                <Array Lengths="250">
+                    <Elements>0x3FF0000000000000;0x0,0x4000000000000000;0x0,0x4008000000000000;0x0,0x4010000000000000;0x0,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC</Elements>
+                </Array>
+            </p.DefaultValue>
+        </DataItem>
+        <DataItem CallDirection="Output" CallIndex="3" DataType="ComplexDouble[]" Id="138" Name="output 1">
+            <p.DefaultValue>
+                <Array Lengths="250">
+                    <Elements>0x3FF0000000000000;0x0,0x4000000000000000;0x0,0x4008000000000000;0x0,0x4010000000000000;0x0,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC</Elements>
+                </Array>
+            </p.DefaultValue>
+        </DataItem>
+        <DataItem CallDirection="Output" CallIndex="2" DataType="ComplexDouble[]" Id="144" Name="output 2">
+            <p.DefaultValue>
+                <Array Lengths="250">
+                    <Elements>0x3FF0000000000000;0x0,0x4000000000000000;0x0,0x4008000000000000;0x0,0x4010000000000000;0x0,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0x3FE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0xBFE6A09E667F3BCC,0xBFE6A09E667F3BCC;0x3FE6A09E667F3BCC,0x3FE6A09E667F3BCC;0xBFE6A09E667F3BCC</Elements>
+                </Array>
+            </p.DefaultValue>
+        </DataItem>
+        <DataTypeReferenceTable xmlns="http://www.ni.com/PlatformFramework">
+            <p.TypeReference TypeId="-1596811593_0">
+                <Class Id="1" Name="" Cluster="">
+                    <ClosedGenericParameters />
+                    <GenericTypeDefinition>
+                        <Void />
+                    </GenericTypeDefinition>
+                    <BaseType>
+                        <Void />
+                    </BaseType>
+                    <Interfaces />
+                    <Members>
+                        <Field FieldAccessPolicy="ReadWrite" Name="Modulation Type">
+                            <DataType>
+                                <String />
+                            </DataType>
+                        </Field>
+                        <Field FieldAccessPolicy="ReadWrite" Name="Pulse Shaping Parameters">
+                            <DataType>
+                                <Class Id="2" Name="" Cluster="">
+                                    <ClosedGenericParameters />
+                                    <GenericTypeDefinition>
+                                        <Void />
+                                    </GenericTypeDefinition>
+                                    <BaseType>
+                                        <Void />
+                                    </BaseType>
+                                    <Interfaces />
+                                    <Members>
+                                        <Field FieldAccessPolicy="ReadWrite" Name="Modulation Type">
+                                            <DataType>
+                                                <Enumeration Name="Enum">
+                                                    <Members>
+                                                        <EnumerationMember Value="0" Name="FSK" />
+                                                        <EnumerationMember Value="1" Name="PSK" />
+                                                        <EnumerationMember Value="2" Name="QAM" />
+                                                        <EnumerationMember Value="3" Name="MSK" />
+                                                        <EnumerationMember Value="4" Name="PAM" />
+                                                        <EnumerationMember Value="5" Name="ASK" />
+                                                    </Members>
+                                                    <DataType>
+                                                        <UInt16 />
+                                                    </DataType>
+                                                </Enumeration>
+                                            </DataType>
+                                        </Field>
+                                        <Field FieldAccessPolicy="ReadWrite" Name="Pulse Shaping Filter">
+                                            <DataType>
+                                                <Enumeration Name="Enum">
+                                                    <Members>
+                                                        <EnumerationMember Value="0" Name="none" />
+                                                        <EnumerationMember Value="1" Name="Raised Cosine" />
+                                                        <EnumerationMember Value="2" Name="Root Raised Cos" />
+                                                        <EnumerationMember Value="3" Name="Gaussian" />
+                                                    </Members>
+                                                    <DataType>
+                                                        <UInt16 />
+                                                    </DataType>
+                                                </Enumeration>
+                                            </DataType>
+                                        </Field>
+                                        <Field FieldAccessPolicy="ReadWrite" Name="Filter Parameter">
+                                            <DataType>
+                                                <Double />
+                                            </DataType>
+                                        </Field>
+                                        <Field FieldAccessPolicy="ReadWrite" Name="Filter Length (Symbols)">
+                                            <DataType>
+                                                <Int32 />
+                                            </DataType>
+                                        </Field>
+                                    </Members>
+                                </Class>
+                            </DataType>
+                        </Field>
+                        <Field FieldAccessPolicy="ReadWrite" Name="TX Oversample Factor">
+                            <DataType>
+                                <Int32 />
+                            </DataType>
+                        </Field>
+                        <Field FieldAccessPolicy="ReadWrite" Name="Packet Length (Bits)">
+                            <DataType>
+                                <Int32 />
+                            </DataType>
+                        </Field>
+                        <Field FieldAccessPolicy="ReadWrite" Name="TX Sample Rate">
+                            <DataType>
+                                <Double />
+                            </DataType>
+                        </Field>
+                        <Field FieldAccessPolicy="ReadWrite" Name="Control Information For Packet Header/Tail">
+                            <DataType>
+                                <Class Id="3" Name="" Cluster="">
+                                    <ClosedGenericParameters />
+                                    <GenericTypeDefinition>
+                                        <Void />
+                                    </GenericTypeDefinition>
+                                    <BaseType>
+                                        <Void />
+                                    </BaseType>
+                                    <Interfaces />
+                                    <Members>
+                                        <Field FieldAccessPolicy="ReadWrite" Name="Training Sequences">
+                                            <DataType>
+                                                <String />
+                                            </DataType>
+                                        </Field>
+                                        <Field FieldAccessPolicy="ReadWrite" Name="Zero Pad Length">
+                                            <DataType>
+                                                <Int32 />
+                                            </DataType>
+                                        </Field>
+                                    </Members>
+                                </Class>
+                            </DataType>
+                        </Field>
+                    </Members>
+                </Class>
+            </p.TypeReference>
+            <p.TypeReference TypeId="-1963530914_0">
+                <Class Id="1" Name="" Cluster="">
+                    <ClosedGenericParameters />
+                    <GenericTypeDefinition>
+                        <Void />
+                    </GenericTypeDefinition>
+                    <BaseType>
+                        <Void />
+                    </BaseType>
+                    <Interfaces />
+                    <Members>
+                        <Field FieldAccessPolicy="ReadWrite" Name="Modulation Type">
+                            <DataType>
+                                <Enumeration Name="Enum">
+                                    <Members>
+                                        <EnumerationMember Value="0" Name="FSK" />
+                                        <EnumerationMember Value="1" Name="PSK" />
+                                        <EnumerationMember Value="2" Name="QAM" />
+                                        <EnumerationMember Value="3" Name="MSK" />
+                                        <EnumerationMember Value="4" Name="PAM" />
+                                        <EnumerationMember Value="5" Name="ASK" />
+                                    </Members>
+                                    <DataType>
+                                        <UInt16 />
+                                    </DataType>
+                                </Enumeration>
+                            </DataType>
+                        </Field>
+                        <Field FieldAccessPolicy="ReadWrite" Name="Pulse Shaping Filter">
+                            <DataType>
+                                <Enumeration Name="Enum">
+                                    <Members>
+                                        <EnumerationMember Value="0" Name="none" />
+                                        <EnumerationMember Value="1" Name="Raised Cosine" />
+                                        <EnumerationMember Value="2" Name="Root Raised Cos" />
+                                        <EnumerationMember Value="3" Name="Gaussian" />
+                                    </Members>
+                                    <DataType>
+                                        <UInt16 />
+                                    </DataType>
+                                </Enumeration>
+                            </DataType>
+                        </Field>
+                        <Field FieldAccessPolicy="ReadWrite" Name="Filter Parameter">
+                            <DataType>
+                                <Double />
+                            </DataType>
+                        </Field>
+                        <Field FieldAccessPolicy="ReadWrite" Name="Filter Length (Symbols)">
+                            <DataType>
+                                <Int32 />
+                            </DataType>
+                        </Field>
+                    </Members>
+                </Class>
+            </p.TypeReference>
+            <p.TypeReference TypeId="-356203670_0">
+                <Class Id="1" Name="" Cluster="">
+                    <ClosedGenericParameters />
+                    <GenericTypeDefinition>
+                        <Void />
+                    </GenericTypeDefinition>
+                    <BaseType>
+                        <Void />
+                    </BaseType>
+                    <Interfaces />
+                    <Members>
+                        <Field FieldAccessPolicy="ReadWrite" Name="Training Sequences">
+                            <DataType>
+                                <String />
+                            </DataType>
+                        </Field>
+                        <Field FieldAccessPolicy="ReadWrite" Name="Zero Pad Length">
+                            <DataType>
+                                <Int32 />
+                            </DataType>
+                        </Field>
+                    </Members>
+                </Class>
+            </p.TypeReference>
+            <p.TypeReference TypeId="384786743_0">
+                <Class Id="1" Name="" Cluster="">
+                    <ClosedGenericParameters />
+                    <GenericTypeDefinition>
+                        <Void />
+                    </GenericTypeDefinition>
+                    <BaseType>
+                        <Void />
+                    </BaseType>
+                    <Interfaces />
+                    <Members>
+                        <Field FieldAccessPolicy="ReadWrite" Name="Modulation Type">
+                            <DataType>
+                                <String />
+                            </DataType>
+                        </Field>
+                        <Field FieldAccessPolicy="ReadWrite" Name="Pulse Shaping Parameters">
+                            <DataType>
+                                <Class Id="2" Name="" Cluster="">
+                                    <ClosedGenericParameters />
+                                    <GenericTypeDefinition>
+                                        <Void />
+                                    </GenericTypeDefinition>
+                                    <BaseType>
+                                        <Void />
+                                    </BaseType>
+                                    <Interfaces />
+                                    <Members>
+                                        <Field FieldAccessPolicy="ReadWrite" Name="Modulation Type">
+                                            <DataType>
+                                                <Enumeration Name="Enum">
+                                                    <Members>
+                                                        <EnumerationMember Value="0" Name="FSK" />
+                                                        <EnumerationMember Value="1" Name="PSK" />
+                                                        <EnumerationMember Value="2" Name="QAM" />
+                                                        <EnumerationMember Value="3" Name="MSK" />
+                                                        <EnumerationMember Value="4" Name="PAM" />
+                                                        <EnumerationMember Value="5" Name="ASK" />
+                                                    </Members>
+                                                    <DataType>
+                                                        <UInt16 />
+                                                    </DataType>
+                                                </Enumeration>
+                                            </DataType>
+                                        </Field>
+                                        <Field FieldAccessPolicy="ReadWrite" Name="Pulse Shaping Filter">
+                                            <DataType>
+                                                <Enumeration Name="Enum">
+                                                    <Members>
+                                                        <EnumerationMember Value="0" Name="none" />
+                                                        <EnumerationMember Value="1" Name="Raised Cosine" />
+                                                        <EnumerationMember Value="2" Name="Root Raised Cos" />
+                                                        <EnumerationMember Value="3" Name="Gaussian" />
+                                                    </Members>
+                                                    <DataType>
+                                                        <UInt16 />
+                                                    </DataType>
+                                                </Enumeration>
+                                            </DataType>
+                                        </Field>
+                                        <Field FieldAccessPolicy="ReadWrite" Name="Filter Parameter">
+                                            <DataType>
+                                                <Double />
+                                            </DataType>
+                                        </Field>
+                                        <Field FieldAccessPolicy="ReadWrite" Name="Filter Length (Symbols)">
+                                            <DataType>
+                                                <Int32 />
+                                            </DataType>
+                                        </Field>
+                                    </Members>
+                                </Class>
+                            </DataType>
+                        </Field>
+                        <Field FieldAccessPolicy="ReadWrite" Name="TX Oversample Factor">
+                            <DataType>
+                                <Int32 />
+                            </DataType>
+                        </Field>
+                        <Field FieldAccessPolicy="ReadWrite" Name="Packet Length (Bits)">
+                            <DataType>
+                                <Int32 />
+                            </DataType>
+                        </Field>
+                        <Field FieldAccessPolicy="ReadWrite" Name="TX Sample Rate">
+                            <DataType>
+                                <Double />
+                            </DataType>
+                        </Field>
+                        <Field FieldAccessPolicy="ReadWrite" Name="Control Information For Packet Header/Tail">
+                            <DataType>
+                                <Class Id="3" Name="" Cluster="">
+                                    <ClosedGenericParameters />
+                                    <GenericTypeDefinition>
+                                        <Void />
+                                    </GenericTypeDefinition>
+                                    <BaseType>
+                                        <Void />
+                                    </BaseType>
+                                    <Interfaces />
+                                    <Members>
+                                        <Field FieldAccessPolicy="ReadWrite" Name="Training Sequences ">
+                                            <DataType>
+                                                <String />
+                                            </DataType>
+                                        </Field>
+                                        <Field FieldAccessPolicy="ReadWrite" Name="Zero Pad Length">
+                                            <DataType>
+                                                <Int32 />
+                                            </DataType>
+                                        </Field>
+                                    </Members>
+                                </Class>
+                            </DataType>
+                        </Field>
+                    </Members>
+                </Class>
+            </p.TypeReference>
+            <p.TypeReference TypeId="512896490_0">
+                <Class Id="1" Name="" Cluster="">
+                    <ClosedGenericParameters />
+                    <GenericTypeDefinition>
+                        <Void />
+                    </GenericTypeDefinition>
+                    <BaseType>
+                        <Void />
+                    </BaseType>
+                    <Interfaces />
+                    <Members>
+                        <Field FieldAccessPolicy="ReadWrite" Name="Training Sequences ">
+                            <DataType>
+                                <String />
+                            </DataType>
+                        </Field>
+                        <Field FieldAccessPolicy="ReadWrite" Name="Zero Pad Length">
+                            <DataType>
+                                <Int32 />
+                            </DataType>
+                        </Field>
+                    </Members>
+                </Class>
+            </p.TypeReference>
+        </DataTypeReferenceTable>
+    </VirtualInstrument>
+</SourceFile>

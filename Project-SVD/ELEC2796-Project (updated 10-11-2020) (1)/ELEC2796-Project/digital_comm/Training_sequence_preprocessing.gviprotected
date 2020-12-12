@@ -1,0 +1,275 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile xmlns="http://www.ni.com/PlatformFramework">
+    <SourceModelFeatureSet>
+        <ParsableNamespace AssemblyFileVersion="3.0.0.56744" FeatureSetName="LabVIEW Virtual Instrument" MinimumParsableVersion="3.0.0.0" MinimumSemanticallyEquivalentVersion="3.0.0.0" Name="http://www.ni.com/LabVIEW.VI" Version="3.0.0.49154" />
+        <ParsableNamespace AssemblyFileVersion="3.0.0.56744" FeatureSetName="Editor" MinimumParsableVersion="3.0.0.0" MinimumSemanticallyEquivalentVersion="3.0.0.0" Name="http://www.ni.com/PlatformFramework" Version="3.0.0.49152" />
+        <ParsableNamespace AssemblyFileVersion="3.0.0.56744" FeatureSetName="LabVIEW Controls" MinimumParsableVersion="3.0.0.0" MinimumSemanticallyEquivalentVersion="3.0.0.0" Name="http://www.ni.com/Controls.LabVIEW.Design" Version="3.0.0.49152" />
+        <ParsableNamespace AssemblyFileVersion="3.0.0.56744" FeatureSetName="Common Language Components" MinimumParsableVersion="3.0.0.0" MinimumSemanticallyEquivalentVersion="3.0.0.0" Name="http://www.ni.com/MocCommon" Version="3.0.0.49152" />
+    </SourceModelFeatureSet>
+    <VirtualInstrument Id="1" xmlns="http://www.ni.com/LabVIEW.VI">
+        <Icon Id="417" ListViewIconCrop="0 0 40 40" xmlns="http://www.ni.com/PlatformFramework">
+            <IconPanel Height="[float]40" Id="418" Width="[float]40">
+                <IconTemplate Id="669" TemplateName="Blank" />
+                <Canvas Background="[SMSolidColorBrush]#00ffffff" ClipToBounds="[bool]True" Id="422" Margin="[SMThickness]0,0,0,0">
+                    <Rectangle EditMode="[ShapeEditMode]EditablePath" Fill="[SMSolidColorBrush]#ffffffff" Height="[float]40" Id="647" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" Stroke="[SMSolidColorBrush]#ff000000" StrokeThickness="[float]1" Top="[float]0" Width="[float]40" />
+                    <Rectangle EditMode="[ShapeEditMode]EditablePath" Fill="[SMSolidColorBrush]#ff646464" Height="[float]13" Id="648" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" Stroke="[SMSolidColorBrush]#ff000000" StrokeThickness="[float]1" Top="[float]0" Width="[float]40" />
+                    <Text Font="[SMFont]0,6," Foreground="[SMColor]#ffffffff" Id="649" Left="[float]2" Text="[string]   MIMO" TextWrapping="[TextWrapping]NoWrap" Top="[float]1" />
+                    <Text Font="[SMFont]0,6," Id="650" Left="[float]7" Text="[string]    TS" TextWrapping="[TextWrapping]NoWrap" Top="[float]14" />
+                    <Text Font="[SMFont]0,6," Id="651" Left="[float]8" Text="[string]preproc" TextWrapping="[TextWrapping]NoWrap" Top="[float]23" />
+                </Canvas>
+            </IconPanel>
+        </Icon>
+        <ConnectorPane Height="40" Id="9" ListViewHeight="120" ListViewWidth="150" Width="40" xmlns="http://www.ni.com/PlatformFramework">
+            <ConnectorPaneTerminal ListViewHotspot="0 35" Parameter="1023" />
+            <ConnectorPaneTerminal Hotspot="0 15" />
+            <ConnectorPaneTerminal Hotspot="0 25" />
+            <ConnectorPaneTerminal Hotspot="15 0" />
+            <ConnectorPaneTerminal Hotspot="40 5" ListViewHotspot="150 65" Parameter="1042" />
+            <ConnectorPaneTerminal Hotspot="40 15" />
+            <ConnectorPaneTerminal Hotspot="40 25" />
+            <ConnectorPaneTerminal Hotspot="15 40" />
+            <ConnectorPaneTerminal Hotspot="0 35" ListViewHotspot="0 50" Parameter="1054" />
+            <ConnectorPaneTerminal Hotspot="25 0" />
+            <ConnectorPaneTerminal Hotspot="40 35" ListViewHotspot="150 80" Parameter="1065" />
+            <ConnectorPaneTerminal Hotspot="25 40" />
+        </ConnectorPane>
+        <MethodDocumentation xmlns="http://www.ni.com/PlatformFramework" />
+        <DiagramUnplacedItems Id="10" />
+        <FrontPanelUnplacedItems Id="11">
+            <Cluster BaseName="[string]Error In" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]Error" Height="[float]165" Id="1055" Label="[UIModel]1062" Left="[float]170" Top="[float]291" Value="{DataItemBinding Id=1054}" Width="[float]138">
+                <LVCheckBox Content="[string]" ContentVisibility="[Visibility]Collapsed" Height="[float]17" Id="1056" Label="[UIModel]1057" Left="[float]5" Top="[float]25" Value="{ClusterBinding FieldName=status}" Width="[float]19" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+                <Label Id="1057" LabelOwner="[UIModel]1056" Left="[float]5" Locked="[bool]True" Text="[string]status" Top="[float]5" />
+                <NumericText Height="[float]22" Id="1058" Label="[UIModel]1059" Left="[float]50" Top="[float]25" Value="{ClusterBinding FieldName=code}" ValueType="[Type]Int32" Width="[float]75" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+                <Label Id="1059" LabelOwner="[UIModel]1058" Left="[float]50" Locked="[bool]True" Text="[string]code" Top="[float]5" />
+                <StringControl AcceptsReturn="[bool]True" Height="[float]80" HorizontalScrollBarVisibility="[ScrollBarVisibility]Auto" Id="1060" IsReadOnly="[bool]False" Label="[UIModel]1061" Left="[float]5" Text="{ClusterBinding FieldName=source}" Top="[float]72" VerticalScrollBarVisibility="[ScrollBarVisibility]Auto" Width="[float]120" WordWrap="[bool]True" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+                <Label Id="1061" LabelOwner="[UIModel]1060" Left="[float]5" Locked="[bool]True" Text="[string]source" Top="[float]52" />
+            </Cluster>
+            <Label Id="1062" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]1055" Left="[float]170" Locked="[bool]True" Text="[string]error in (no error)" Top="[float]268" />
+            <Cluster BaseName="[string]Error Out" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]Error" Height="[float]165" Id="1066" Label="[UIModel]1073" Left="[float]347" Top="[float]291" Value="{DataItemBinding Id=1065}" Width="[float]138">
+                <LVCheckBox Content="[string]" ContentVisibility="[Visibility]Collapsed" Height="[float]17" Id="1067" IsReadOnly="[bool]True" Label="[UIModel]1068" Left="[float]5" Top="[float]25" Value="{ClusterBinding FieldName=status}" Width="[float]19" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+                <Label Id="1068" LabelOwner="[UIModel]1067" Left="[float]5" Locked="[bool]True" Text="[string]status" Top="[float]5" />
+                <NumericText Height="[float]22" Id="1069" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Label="[UIModel]1070" Left="[float]50" Top="[float]25" Value="{ClusterBinding FieldName=code}" ValueType="[Type]Int32" Width="[float]75" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+                <Label Id="1070" LabelOwner="[UIModel]1069" Left="[float]50" Locked="[bool]True" Text="[string]code" Top="[float]5" />
+                <StringControl AcceptsReturn="[bool]True" Height="[float]80" HorizontalScrollBarVisibility="[ScrollBarVisibility]Auto" Id="1071" IsReadOnly="[bool]True" Label="[UIModel]1072" Left="[float]5" Text="{ClusterBinding FieldName=source}" Top="[float]72" VerticalScrollBarVisibility="[ScrollBarVisibility]Auto" Width="[float]120" WordWrap="[bool]True" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+                <Label Id="1072" LabelOwner="[UIModel]1071" Left="[float]5" Locked="[bool]True" Text="[string]source" Top="[float]52" />
+            </Cluster>
+            <Label Id="1073" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]1066" Left="[float]347" Locked="[bool]True" Text="[string]error out" Top="[float]268" />
+        </FrontPanelUnplacedItems>
+        <BlockDiagram Id="12">
+            <Wire Id="991" Joints="N(1005:Out) h(5) v(-15) N(1004:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+            <BuildArray Bounds="630 335 40 40" ConcatenateInputs="True" Id="993" Terminals="outArray=995, c0t0v=1035, c1t0v=1035, c2t0v=1035, c3t0v=1035" VerticalChunkCount="4" />
+            <ArraySize Bounds="700 295 40 20" Id="994" />
+            <Wire Id="995" Joints="N(993:outArray) h(15) B(1) h(10) v(-40) N(994:array) B(1) v(25) N(998:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+            <InitializeArray Bounds="825 315 40 30" Id="996" Terminals="element=999, outArray=1008, c0t0v=1006" />
+            <Literal Bounds="750 315 57 15" DataType="ComplexDouble" Facade="NationalInstruments.MocCommon.Modeling.INumericBehavior" Id="997" Label="1015" xmlns="http://www.ni.com/MocCommon">
+                <p.Data>0x0;0x0</p.Data>
+                <NumericBehavior Interpretation="Exact" ValueFormatter="LV:" />
+            </Literal>
+            <BuildArray Bounds="890 360 40 30" ConcatenateInputs="True" Id="998" Terminals="outArray=1037, c0t0v=995, c1t0v=1008, c2t0v=1014" VerticalChunkCount="3" />
+            <Wire Id="999" Joints="N(997:Out) N(996:element)" xmlns="http://www.ni.com/PlatformFramework" />
+            <BuildArray Bounds="625 445 40 40" ConcatenateInputs="True" Id="1001" Terminals="outArray=1003, c0t0v=1020, c1t0v=1020, c2t0v=1020, c3t0v=1020" VerticalChunkCount="4" />
+            <BuildArray Bounds="895 435 40 30" ConcatenateInputs="True" Id="1002" Terminals="outArray=1038, c0t0v=1008, c1t0v=1003, c2t0v=1014" VerticalChunkCount="3" />
+            <Wire Id="1003" Joints="N(1001:outArray) N(1002:c1t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Multiply Bounds="775 265 30 30" Id="1004" Terminals="o=1006, c0t0v=991, c1t0v=1007" />
+            <Literal Bounds="650 280 40 15" DataType="Double" Facade="NationalInstruments.MocCommon.Modeling.INumericBehavior" Id="1005" Label="1016" xmlns="http://www.ni.com/MocCommon">
+                <p.Data>0x4000000000000000</p.Data>
+                <NumericBehavior Interpretation="Exact" ValueFormatter="LV:" />
+            </Literal>
+            <Wire Id="1006" Joints="N(1004:o) h(5) v(60) N(996:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="1007" Joints="N(994:size(s\)) h(5) v(-25) N(1004:c1t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="1008" Joints="N(996:outArray) h(10) v(55) B(2) N(998:c1t0v) B(2) v(65) N(1002:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+            <InitializeArray Bounds="820 470 40 30" Id="1009" Terminals="element=1011, outArray=1014, c0t0v=1013" />
+            <Literal Bounds="745 470 57 15" DataType="ComplexDouble" Facade="NationalInstruments.MocCommon.Modeling.INumericBehavior" Id="1010" Label="1017" xmlns="http://www.ni.com/MocCommon">
+                <p.Data>0x0;0x0</p.Data>
+                <NumericBehavior Interpretation="Exact" ValueFormatter="LV:" />
+            </Literal>
+            <Wire Id="1011" Joints="N(1010:Out) N(1009:element)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Literal Bounds="760 500 40 15" DataType="Int32" Facade="NationalInstruments.MocCommon.Modeling.INumericBehavior" Id="1012" Label="1018" xmlns="http://www.ni.com/MocCommon">
+                <p.Data>10</p.Data>
+                <NumericBehavior Interpretation="Exact" ValueFormatter="LV:" />
+            </Literal>
+            <Wire Id="1013" Joints="N(1012:Out) h(5) v(-10) N(1009:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="1014" Joints="N(1009:outArray) h(5) v(-15) B(2) N(1002:c2t0v) B(2) v(-75) N(998:c2t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+            <TextNode AttachedTo="997" Bounds="750 315 0 0" Id="1015" Text="dimension size" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+            <TextNode AttachedTo="1005" Bounds="650 280 0 0" Id="1016" Text="input 1" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+            <TextNode AttachedTo="1010" Bounds="745 470 0 0" Id="1017" Text="dimension size" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+            <TextNode AttachedTo="1012" Bounds="760 500 0 0" Id="1018" Text="dimension size" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="1020" Joints="N(1032:c1t0v) h(7) v(30) h(118) B(3) N(1001:c0t0v) B(3) v(10) h(40) B(6) N(1001:c1t0v) B(6) v(10) h(15) B(9) N(1001:c2t0v) B(9) v(10) N(1001:c3t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+            <DataAccessor Bounds="215 370 40 15" DataItem="1023" Id="1021" Label="1022">
+                <Terminal DataType="@-2013166653_0" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+            </DataAccessor>
+            <TextNode AttachedTo="1021" Bounds="95 370 115 16" Id="1022" Text="Training Sequences in" xmlns="http://www.ni.com/PlatformFramework" />
+            <PropertyNode Bounds="285 370 150 60" HasErrorTerminals="False" Id="1032" InstanceDataType="@-2013166653_0" Template="List" Terminals="instance in=1033~0:5, instance out~150:5, c0t0v=1035~150:35, c1t0v=1020~150:50" VerticalChunkCount="2">
+                <p.PropertyItem IsWrite="False">
+                    <PathElement>Length 11 Zadoff Chu 1 </PathElement>
+                </p.PropertyItem>
+                <p.PropertyItem IsWrite="False">
+                    <PathElement>Length 11 Zadoff Chu 2</PathElement>
+                </p.PropertyItem>
+            </PropertyNode>
+            <Wire Id="1033" Joints="N(1021:Value) N(1032:instance in)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="1035" Joints="N(1032:c0t0v) h(70) v(-25) h(30) v(-40) h(10) B(5) N(993:c0t0v) B(5) v(10) h(65) B(8) N(993:c1t0v) B(8) v(10) B(10) N(993:c2t0v) B(10) v(10) N(993:c3t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+            <BuildCluster Bounds="1010 400 40 20" Id="1036" Terminals="outCluster=1051, c0t0v=1037, c1t0v=1038" VerticalChunkCount="2" />
+            <Wire Id="1037" Joints="N(998:outArray) h(5) v(40) N(1036:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="1038" Joints="N(1002:outArray) h(5) v(-25) N(1036:c1t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+            <DataAccessor Bounds="1065 400 40 15" DataItem="1042" Id="1040" Label="1041">
+                <Terminal DataType="@-1309552882_0" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+            </DataAccessor>
+            <TextNode AttachedTo="1040" Bounds="1110 400 123 16" Id="1041" Text="Training Sequences out" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="1051" Joints="N(1036:outCluster) N(1040:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+            <DataAccessor Bounds="390 575 40 15" DataItem="1054" Id="1052" Label="1053">
+                <Terminal DataType="Error" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+            </DataAccessor>
+            <TextNode AttachedTo="1052" Bounds="292 575 93 16" Id="1053" Text="error in (no error)" xmlns="http://www.ni.com/PlatformFramework" />
+            <DataAccessor Bounds="475 575 40 15" DataItem="1065" Id="1063" Label="1064">
+                <Terminal DataType="Error" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+            </DataAccessor>
+            <TextNode AttachedTo="1063" Bounds="520 575 47 16" Id="1064" Text="error out" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="1074" Joints="N(1052:Value) N(1063:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+        </BlockDiagram>
+        <CPFrontPanel Height="[float]1600" Id="13" Width="[float]2000">
+            <Cluster BaseName="[string]Cluster" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]@-2013166653_0" Height="[float]174" Id="1024" Label="[UIModel]1031" Left="[float]409" Top="[float]137" Value="{DataItemBinding Id=1023}" Width="[float]839">
+                <ArrayViewer ArrayElement="[UIModel]1029" BaseName="[string]Array" Columns="[int]11" Dimensions="[int]1" Height="[float]36" Id="1025" Label="[UIModel]1026" Left="[float]18" Orientation="[SMOrientation]Horizontal" Rows="[int]1" Top="[float]49" Value="{ClusterBinding FieldName=Length\ 11\ Zadoff\ Chu\ 1\ }" Width="[float]784" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+                    <p.DefaultElementValue>0x0;0x0</p.DefaultElementValue>
+                    <NumericText BaseName="[string]Numeric" Height="[float]22" Id="1029" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Left="[float]317" Name="[string]Child" RadixVisibility="[SMVisibility]Collapsed" Top="[float]7" Value="[ComplexDouble]1 + 0i" ValueType="[Type]ComplexDouble" Width="[float]64" />
+                </ArrayViewer>
+                <Label Id="1026" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]1025" Left="[float]18" Locked="[bool]True" Text="[string]Length 11 Zadoff Chu 1 " Top="[float]26" />
+                <ArrayViewer ArrayElement="[UIModel]1030" BaseName="[string]Array" Columns="[int]11" Dimensions="[int]1" Height="[float]36" Id="1027" Label="[UIModel]1028" Left="[float]18" Orientation="[SMOrientation]Horizontal" Rows="[int]1" Top="[float]111" Value="{ClusterBinding FieldName=Length\ 11\ Zadoff\ Chu\ 2}" Width="[float]784" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+                    <p.DefaultElementValue>0x0;0x0</p.DefaultElementValue>
+                    <NumericText BaseName="[string]Numeric" Height="[float]22" Id="1030" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Left="[float]251" Name="[string]Child" RadixVisibility="[SMVisibility]Collapsed" Top="[float]7" Value="[ComplexDouble]1 + 0i" ValueType="[Type]ComplexDouble" Width="[float]64" />
+                </ArrayViewer>
+                <Label Id="1028" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]1027" Left="[float]18" Locked="[bool]True" Text="[string]Length 11 Zadoff Chu 2" Top="[float]88" />
+            </Cluster>
+            <Label Id="1031" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]1024" Left="[float]409" Locked="[bool]True" Text="[string]Training Sequences in" Top="[float]114" />
+            <Cluster BaseName="[string]Cluster" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]@-1309552882_0" Height="[float]174" Id="1043" Label="[UIModel]1050" Left="[float]409" Top="[float]370" Value="{DataItemBinding Id=1042}" Width="[float]839">
+                <ArrayViewer ArrayElement="[UIModel]1048" BaseName="[string]Array" Columns="[int]11" Dimensions="[int]1" Height="[float]36" Id="1044" Label="[UIModel]1045" Left="[float]18" Orientation="[SMOrientation]Horizontal" Rows="[int]1" Top="[float]49" Value="{ClusterBinding FieldName=Traning\ sequence\ 1\ }" Width="[float]784" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+                    <p.DefaultElementValue>0x0;0x0</p.DefaultElementValue>
+                    <NumericText BaseName="[string]Numeric" Height="[float]22" Id="1048" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Left="[float]251" Name="[string]Child" RadixVisibility="[SMVisibility]Collapsed" Top="[float]7" Value="[ComplexDouble]0 + 0i" ValueType="[Type]ComplexDouble" Width="[float]64" />
+                </ArrayViewer>
+                <Label Id="1045" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]1044" Left="[float]18" Locked="[bool]True" Text="[string]Traning sequence 1 " Top="[float]26" />
+                <ArrayViewer ArrayElement="[UIModel]1049" BaseName="[string]Array" Columns="[int]11" Dimensions="[int]1" Height="[float]36" Id="1046" Label="[UIModel]1047" Left="[float]18" Orientation="[SMOrientation]Horizontal" Rows="[int]1" Top="[float]111" Value="{ClusterBinding FieldName=Training\ sequence\ 2}" Width="[float]784" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+                    <p.DefaultElementValue>0x0;0x0</p.DefaultElementValue>
+                    <NumericText BaseName="[string]Numeric" Height="[float]22" Id="1049" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Left="[float]53" Name="[string]Child" RadixVisibility="[SMVisibility]Collapsed" Top="[float]7" Value="[ComplexDouble]1 + 0i" ValueType="[Type]ComplexDouble" Width="[float]64" />
+                </ArrayViewer>
+                <Label Id="1047" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]1046" Left="[float]18" Locked="[bool]True" Text="[string]Training sequence 2" Top="[float]88" />
+            </Cluster>
+            <Label Id="1050" LabelAlignment="[PartAlignment]TopLeft" LabelOwner="[UIModel]1043" Left="[float]409" Locked="[bool]True" Text="[string]Training Sequences out" Top="[float]347" />
+        </CPFrontPanel>
+        <DataItem CallDirection="Input" CallIndex="0" DataType="@-2013166653_0" Id="1023" Name="Training Sequences in">
+            <p.DefaultValue>
+                <Cluster>
+                    <Field1>
+                        <Array Lengths="11">
+                            <Elements>0x3FF0000000000000;0x0,0x3FF0000000000000;0x0,0x3FF0000000000000;0x0,0x0;0x0,0x3FF0000000000000;0x0,0x3FF0000000000000;0x0,0x0;0x0,0x3FF0000000000000;0x0,0x0;0x0,0x0;0x0,0x0;0x0</Elements>
+                        </Array>
+                    </Field1>
+                    <Field2>
+                        <Array Lengths="11">
+                            <Elements>0x3FF0000000000000;0x0,0x0;0x0,0x3FF0000000000000;0x0,0x3FF0000000000000;0x0,0x0;0x0,0x3FF0000000000000;0x0,0x0;0x0,0x0;0x0,0x0;0x0,0x3FF0000000000000;0x0,0x3FF0000000000000;0x0</Elements>
+                        </Array>
+                    </Field2>
+                </Cluster>
+            </p.DefaultValue>
+        </DataItem>
+        <DataItem CallDirection="Output" CallIndex="0" DataType="@-1309552882_0" Id="1042" Name="Training Sequences out">
+            <p.DefaultValue>
+                <Cluster>
+                    <Field1>
+                        <Array Lengths="11">
+                            <Elements>0x3FF0000000000000;0x0,0x3FF0000000000000;0x0,0x3FF0000000000000;0x0,0x0;0x0,0x3FF0000000000000;0x0,0x3FF0000000000000;0x0,0x0;0x0,0x3FF0000000000000;0x0,0x0;0x0,0x0;0x0,0x0;0x0</Elements>
+                        </Array>
+                    </Field1>
+                    <Field2>
+                        <Array Lengths="11">
+                            <Elements>0x3FF0000000000000;0x0,0x0;0x0,0x3FF0000000000000;0x0,0x3FF0000000000000;0x0,0x0;0x0,0x3FF0000000000000;0x0,0x0;0x0,0x0;0x0,0x0;0x0,0x3FF0000000000000;0x0,0x3FF0000000000000;0x0</Elements>
+                        </Array>
+                    </Field2>
+                </Cluster>
+            </p.DefaultValue>
+        </DataItem>
+        <DataItem CallDirection="Input" CallIndex="1" DataType="Error" Id="1054" Name="error in (no error)">
+            <p.DefaultValue>
+                <Cluster>
+                    <Field1>False</Field1>
+                    <Field2>0</Field2>
+                    <Field3>""</Field3>
+                </Cluster>
+            </p.DefaultValue>
+        </DataItem>
+        <DataItem CallDirection="Output" CallIndex="1" DataType="Error" Id="1065" Name="error out">
+            <p.DefaultValue>
+                <Cluster>
+                    <Field1>False</Field1>
+                    <Field2>0</Field2>
+                    <Field3>""</Field3>
+                </Cluster>
+            </p.DefaultValue>
+        </DataItem>
+        <DataTypeReferenceTable xmlns="http://www.ni.com/PlatformFramework">
+            <p.TypeReference TypeId="-2013166653_0">
+                <Class Id="1" Name="" Cluster="">
+                    <ClosedGenericParameters />
+                    <GenericTypeDefinition>
+                        <Void />
+                    </GenericTypeDefinition>
+                    <BaseType>
+                        <Void />
+                    </BaseType>
+                    <Interfaces />
+                    <Members>
+                        <Field FieldAccessPolicy="ReadWrite" Name="Length 11 Zadoff Chu 1 ">
+                            <DataType>
+                                <VariableArray>
+                                    <DereferenceType>
+                                        <ComplexDouble />
+                                    </DereferenceType>
+                                </VariableArray>
+                            </DataType>
+                        </Field>
+                        <Field FieldAccessPolicy="ReadWrite" Name="Length 11 Zadoff Chu 2">
+                            <DataType>
+                                <VariableArray>
+                                    <DereferenceType>
+                                        <ComplexDouble />
+                                    </DereferenceType>
+                                </VariableArray>
+                            </DataType>
+                        </Field>
+                    </Members>
+                </Class>
+            </p.TypeReference>
+            <p.TypeReference TypeId="-1309552882_0">
+                <Class Id="1" Name="" Cluster="">
+                    <ClosedGenericParameters />
+                    <GenericTypeDefinition>
+                        <Void />
+                    </GenericTypeDefinition>
+                    <BaseType>
+                        <Void />
+                    </BaseType>
+                    <Interfaces />
+                    <Members>
+                        <Field FieldAccessPolicy="ReadWrite" Name="Traning sequence 1 ">
+                            <DataType>
+                                <VariableArray>
+                                    <DereferenceType>
+                                        <ComplexDouble />
+                                    </DereferenceType>
+                                </VariableArray>
+                            </DataType>
+                        </Field>
+                        <Field FieldAccessPolicy="ReadWrite" Name="Training sequence 2">
+                            <DataType>
+                                <VariableArray>
+                                    <DereferenceType>
+                                        <ComplexDouble />
+                                    </DereferenceType>
+                                </VariableArray>
+                            </DataType>
+                        </Field>
+                    </Members>
+                </Class>
+            </p.TypeReference>
+        </DataTypeReferenceTable>
+    </VirtualInstrument>
+</SourceFile>
