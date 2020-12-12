@@ -598,7 +598,7 @@
                     <Wire Id="1997" Joints="N(2051:R3) N(2015:L3)" xmlns="http://www.ni.com/PlatformFramework" />
                     <Wire Id="2011" Joints="N(2015:R1) h(265) v(-40) N(625:L3)" xmlns="http://www.ni.com/PlatformFramework" />
                     <Wire Id="2012" Joints="N(1976:22) h(141) v(-50) h(605) N(608:B0)" xmlns="http://www.ni.com/PlatformFramework" />
-                    <Wire Id="2013" Joints="N(608:B1) v(35) h(50) v(-40) N(2048:L3)" xmlns="http://www.ni.com/PlatformFramework" />
+                    <Wire Id="2013" Joints="N(608:B1) v(35) h(50) v(-5) B(3) h(155) N(2051:B0) B(3) v(-35) N(2048:L3)" xmlns="http://www.ni.com/PlatformFramework" />
                     <Wire Id="2014" Joints="N(585:R1) h(120) B(1) N(608:L1) B(1) v(-100) N(2050:L1)" xmlns="http://www.ni.com/PlatformFramework" />
                     <MethodCall Bounds="1160 265 40 40" Id="2015" Target="decode\.gviprotected">
                         <p.MethodDeclaration>
@@ -674,6 +674,7 @@
                                 <Parameter Id="L1" Desc="Input Complex Symbols 2" />
                                 <Parameter Id="T0" Desc="Channel estimates" />
                                 <Parameter Id="L3" Desc="error in (no error)" />
+                                <Parameter Id="B0" Desc="OFDM Parameters In" />
                                 <Parameter Id="R0" Desc="Output Complex Symbols" />
                                 <Parameter Id="R2" Desc="Modulation Parameters Out" />
                                 <Parameter Id="R3" Desc="error out" />
@@ -684,6 +685,7 @@
                         <Terminal DataType="ComplexDouble[]" Direction="Input" Hotspot="0 15" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
                         <Terminal DataType="@-2026884572_0" Direction="Input" Hotspot="15 0" Id="T0" xmlns="http://www.ni.com/PlatformFramework" />
                         <Terminal DataType="Error" Direction="Input" Hotspot="0 35" Id="L3" xmlns="http://www.ni.com/PlatformFramework" />
+                        <Terminal DataType="@-444746544_0" Direction="Input" Hotspot="15 40" Id="B0" xmlns="http://www.ni.com/PlatformFramework" />
                         <Terminal DataType="ComplexDouble[]" Direction="Output" Hotspot="40 5" Id="R0" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
                         <Terminal DataType="@2081352814_0" Direction="Output" Hotspot="40 25" Id="R2" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
                         <Terminal DataType="Error" Direction="Output" Hotspot="40 35" Id="R3" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />

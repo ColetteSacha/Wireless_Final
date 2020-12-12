@@ -400,6 +400,7 @@
                         <p.MethodDeclaration>
                             <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
                                 <Parameter Id="L0" Desc="input symbols " />
+                                <Parameter Id="L1" Desc="OFDM Parameters In" />
                                 <Parameter Id="L2" Desc="Modulation Parameters In" />
                                 <Parameter Id="L3" Desc="error in (no error)" />
                                 <Parameter Id="R2" Desc="Modulation Parameters Out" />
@@ -409,6 +410,7 @@
                             </MethodDeclaration>
                         </p.MethodDeclaration>
                         <Terminal DataType="ComplexDouble[]" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+                        <Terminal DataType="@-444746544_0" Direction="Input" Hotspot="0 15" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
                         <Terminal DataType="@-1596811593_0" Direction="Input" Hotspot="0 25" Id="L2" xmlns="http://www.ni.com/PlatformFramework" />
                         <Terminal DataType="Error" Direction="Input" Hotspot="0 35" Id="L3" xmlns="http://www.ni.com/PlatformFramework" />
                         <Terminal DataType="@384786743_0" Direction="Output" Hotspot="40 25" Id="R2" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
@@ -418,7 +420,7 @@
                     </MethodCall>
                     <Wire Id="9228" Joints="N(9217:R0) h(25) v(-10) N(9215:L0)" xmlns="http://www.ni.com/PlatformFramework" />
                     <Wire Id="9229" Joints="N(9217:R1) h(30) v(-10) N(9215:L1)" xmlns="http://www.ni.com/PlatformFramework" />
-                    <Wire Id="9233" Joints="N(9194:21) h(304) v(-65) N(9215:L2)" xmlns="http://www.ni.com/PlatformFramework" />
+                    <Wire Id="9233" Joints="N(9194:21) h(194) B(1) h(110) v(-65) N(9215:L2) B(1) v(-65) N(9217:L1)" xmlns="http://www.ni.com/PlatformFramework" />
                     <Wire Id="9236" Joints="N(9217:R3) h(35) v(-10) N(9215:L3)" xmlns="http://www.ni.com/PlatformFramework" />
                     <Wire Id="9240" Joints="N(9217:R2) h(5) v(20) h(155) v(-20) N(9082:L2)" xmlns="http://www.ni.com/PlatformFramework" />
                 </CaseStructure.Case>
@@ -509,7 +511,7 @@
                 <TabItem Header="[string]Eye Diagram" Id="283">
                     <Canvas Height="[float]329" Id="285" Left="[float]6" Top="[float]27" Width="[float]368" xmlns="http://www.ni.com/PlatformFramework">
                         <Graph BaseName="[string]Graph" BorderThickness="[SMThickness]1,1,1,1" DataSource="{DataItemBinding Id=119}" Height="[float]316" Id="287" Label="[UIModel]288" Left="[float]6" PreferIndexData="[bool]False" RenderMode="[RenderMode]Hardware" SuppressScaleLayout="[bool]False" Top="[float]7" Width="[float]356" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
-                            <Axis Adjuster="[RangeAdjuster]FitExactly" Id="297" Label="[string]Time" MajorDivisions="[UIModel]303" MajorGridLines="[UIModel]601" Orientation="[SMOrientation]Horizontal" Range="[IRange]-3.7947076036992655E-19, 2.0249999999999998E-05, System.Double" ValueType="[Type]Double">
+                            <Axis Adjuster="[RangeAdjuster]FitExactly" Id="297" Label="[string]Time" MajorDivisions="[UIModel]303" MajorGridLines="[UIModel]601" Orientation="[SMOrientation]Horizontal" Range="[IRange]-4.0657581468206416E-19, 2.0249999999999998E-05, System.Double" ValueType="[Type]Double">
                                 <RangeLabeledDivisions Id="303" LabelPresenter="[string]LVRelativeSeconds:&gt;&gt;0.0#E+0" />
                                 <GridLines Id="601" />
                             </Axis>
@@ -3200,7 +3202,7 @@
                 <TabItem Header="[string]Eye Diagram" Id="6417">
                     <Canvas Height="[float]329" Id="6419" Left="[float]6" Top="[float]27" Width="[float]368" xmlns="http://www.ni.com/PlatformFramework">
                         <Graph BaseName="[string]Graph" BorderThickness="[SMThickness]1,1,1,1" DataSource="{DataItemBinding Id=3652}" Height="[float]316" Id="3654" Label="[UIModel]6180" Left="[float]6" PreferIndexData="[bool]False" RenderMode="[RenderMode]Hardware" SuppressScaleLayout="[bool]False" Top="[float]7" Width="[float]356" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
-                            <Axis Adjuster="[RangeAdjuster]FitExactly" Id="3655" Label="[string]Time" MajorDivisions="[UIModel]6173" MajorGridLines="[UIModel]6174" Orientation="[SMOrientation]Horizontal" Range="[IRange]-3.7947076036992655E-19, 2.0249999999999998E-05, System.Double" ValueType="[Type]Double">
+                            <Axis Adjuster="[RangeAdjuster]FitExactly" Id="3655" Label="[string]Time" MajorDivisions="[UIModel]6173" MajorGridLines="[UIModel]6174" Orientation="[SMOrientation]Horizontal" Range="[IRange]-4.0657581468206416E-19, 2.0249999999999998E-05, System.Double" ValueType="[Type]Double">
                                 <RangeLabeledDivisions Id="6173" LabelPresenter="[string]LVRelativeSeconds:&gt;&gt;0.0#E+0" />
                                 <GridLines Id="6174" />
                             </Axis>
