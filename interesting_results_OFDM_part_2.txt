@@ -1,0 +1,7 @@
+N = 64:
+Oversample 2 : 0.0034608
+Oversample 10: 0.0057048
+Oversample 20: 0.0048278
+
+N = 16 :
+Oversample 10 : 0.0159844
