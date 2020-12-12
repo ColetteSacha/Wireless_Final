@@ -1,0 +1,12 @@
+Dans notre implémentation il faut que le channel soit constant en fonction du temps.
+Cela peut etre un soucis ds la pratique. Une manière d'améliorer le système est de diminuer
+le temps d'envoi entre deux symbols OFDM. Pour se faire, on peut augmenter le symbol rate en 
+diminuant l'oversample factor. Diminuer l'oversample factor permet aussi d'etre plus robuste
+contre la frequency offset. 
+effet négatif : moins précis pour le délai offset et tu utilise plus de bande passante (chere)
+
+
+Dans l'autre implémentation il faut que le channel entre deux subcarrier doit être proche.
+Pour cela, il faut augmenter l'oversample factor pour diminuer la BW. 
+Effet négatif : plus sensible à l'offset de fréquence
+Effet pos : dimution de la BW (chère) et plus précis pour l'estimation du delay.
