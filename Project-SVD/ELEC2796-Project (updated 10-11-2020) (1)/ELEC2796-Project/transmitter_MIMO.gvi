@@ -3221,7 +3221,7 @@
                                 <RangeLabeledDivisions Id="6173" LabelPresenter="[string]LVRelativeSeconds:&gt;&gt;0.0#E+0" />
                                 <GridLines Id="6174" />
                             </Axis>
-                            <Axis Adjuster="[RangeAdjuster]FitLoosely" Id="3656" Label="[string]Amplitude" MajorDivisions="[UIModel]6175" MajorGridLines="[UIModel]6176" Orientation="[SMOrientation]Vertical" Range="[IRange]-1.4000000000000001, 1.5, System.Double" ScaleKind="[RangeScaleKind]Linear" ValueType="[Type]Double">
+                            <Axis Adjuster="[RangeAdjuster]FitLoosely" Id="3656" Label="[string]Amplitude" MajorDivisions="[UIModel]6175" MajorGridLines="[UIModel]6176" Orientation="[SMOrientation]Vertical" Range="[IRange]-1.5, 1.5, System.Double" ScaleKind="[RangeScaleKind]Linear" ValueType="[Type]Double">
                                 <RangeLabeledDivisions Id="6175" LabelPresenter="[string]LVRelativeSeconds:&gt;&gt;0.0#E+0" />
                                 <GridLines Id="6176" />
                             </Axis>

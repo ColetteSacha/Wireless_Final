@@ -316,7 +316,7 @@
             <TextNode AttachedTo="19" Bounds="88 315 137 16" Id="27" Text="Modulation Parameters In" xmlns="http://www.ni.com/PlatformFramework" />
             <TextNode AttachedTo="20" Bounds="1175 345 147 16" Id="28" Text="Modulation Parameters Out" xmlns="http://www.ni.com/PlatformFramework" />
             <TextNode AttachedTo="21" Bounds="133 40 97 16" Id="29" Text="Channel estimates" xmlns="http://www.ni.com/PlatformFramework" />
-            <PropertyNode Bounds="315 40 150 90" HasErrorTerminals="False" Id="232" InstanceDataType="@-2026884572_0" Template="List" Terminals="instance in=233~0:5, instance out~150:5, c0t0v=236~150:35, c1t0v=240~150:50, c2t0v=241~150:65, c3t0v=242~150:80" VerticalChunkCount="4">
+            <PropertyNode Bounds="315 40 150 90" HasErrorTerminals="False" Id="232" InstanceDataType="@-2026884572_0" Template="List" Terminals="instance in=233~0:5, instance out~150:5, c0t0v=236~150:35, c1t0v=354~150:50, c2t0v=356~150:65, c3t0v=242~150:80" VerticalChunkCount="4">
                 <p.PropertyItem IsWrite="False">
                     <PathElement>Element 1</PathElement>
                 </p.PropertyItem>
@@ -333,11 +333,9 @@
             <Wire Id="233" Joints="N(21:Value) N(232:instance in)" xmlns="http://www.ni.com/PlatformFramework" />
             <ArrayIndex Bounds="520 35 40 30" Id="235" Terminals="array=236, c0t0v=245, c0t1v=260" />
             <Wire Id="236" Joints="N(232:c0t0v) h(14) v(-35) N(235:array)" xmlns="http://www.ni.com/PlatformFramework" />
-            <ArrayIndex Bounds="520 70 40 30" Id="237" Terminals="array=240, c0t0v=245, c0t1v=261" />
+            <ArrayIndex Bounds="520 70 40 30" Id="237" Terminals="array=354, c0t0v=245, c0t1v=261" />
             <ArrayIndex Bounds="520 140 40 30" Id="238" Terminals="array=242, c0t0v=245, c0t1v=263" />
-            <ArrayIndex Bounds="520 105 40 30" Id="239" Terminals="array=241, c0t0v=245, c0t1v=262" />
-            <Wire Id="240" Joints="N(232:c1t0v) h(48) v(-15) N(237:array)" xmlns="http://www.ni.com/PlatformFramework" />
-            <Wire Id="241" Joints="N(232:c2t0v) h(10) v(5) N(239:array)" xmlns="http://www.ni.com/PlatformFramework" />
+            <ArrayIndex Bounds="520 105 40 30" Id="239" Terminals="array=356, c0t0v=245, c0t1v=262" />
             <Wire Id="242" Joints="N(232:c3t0v) h(48) v(25) N(238:array)" xmlns="http://www.ni.com/PlatformFramework" />
             <Literal Bounds="410 140 39.2 16" DataType="Int32" Facade="NationalInstruments.MocCommon.Modeling.INumericBehavior" Id="243" Label="244" xmlns="http://www.ni.com/MocCommon">
                 <p.Data>0</p.Data>
@@ -478,6 +476,8 @@
             </DataAccessor>
             <TextNode AttachedTo="348" Bounds="820 125 43 16" Id="350" Text="matrix v" xmlns="http://www.ni.com/PlatformFramework" />
             <Wire Id="351" Joints="N(254:R3) N(348:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="354" Joints="N(232:c1t0v) h(48) v(-15) N(237:array)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="356" Joints="N(232:c2t0v) h(7) v(5) N(239:array)" xmlns="http://www.ni.com/PlatformFramework" />
         </BlockDiagram>
         <CPFrontPanel Height="[float]1600" Id="13" Width="[float]2000">
             <ArrayViewer ArrayElement="[UIModel]61" BaseName="[string]Array" Columns="[int]6" Dimensions="[int]1" Height="[float]37" Id="60" Label="[UIModel]62" Left="[float]445" Orientation="[SMOrientation]Horizontal" Rows="[int]1" Top="[float]1287" Value="{DataItemBinding Id=34}" Width="[float]395" xmlns="http://www.ni.com/Controls.LabVIEW.Design">

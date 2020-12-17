@@ -218,7 +218,7 @@
             </DataAccessor>
             <CaseStructure Bounds="175 140 865 375" DataType="Error" Id="16" Selected="17" UserSelectorBounds="382.4 0 100.8 16.8">
                 <CaseStructure.Case Bounds="5 5 855 365" Id="17" Pattern="No Error">
-                    <PropertyNode Bounds="20 160 150 90" HasErrorTerminals="False" Id="165" InstanceDataType="@-771384584_0" Template="List" Terminals="instance in=166~0:5, instance out~150:5, c0t0v=195~150:35, c1t0v=209~150:50, c2t0v=204~150:65, c3t0v=205~150:80" VerticalChunkCount="4">
+                    <PropertyNode Bounds="20 160 150 90" HasErrorTerminals="False" Id="165" InstanceDataType="@-771384584_0" Template="List" Terminals="instance in=166~0:5, instance out~150:5, c0t0v=195~150:35, c1t0v=303~150:50, c2t0v=305~150:65, c3t0v=205~150:80" VerticalChunkCount="4">
                         <p.PropertyItem IsWrite="False">
                             <PathElement>Channel Response h_11</PathElement>
                         </p.PropertyItem>
@@ -262,19 +262,17 @@
                     </ComplexSVDDecomposition>
                     <Wire Id="193" Joints="N(175:outArray) N(192:L0)" xmlns="http://www.ni.com/PlatformFramework" />
                     <ArrayIndex Bounds="200 125 40 30" Id="194" Terminals="array=195, c0t0v=198, c0t1v=211" />
-                    <Wire Id="195" Joints="N(165:c0t0v) h(23) v(-65) N(194:array)" xmlns="http://www.ni.com/PlatformFramework" />
+                    <Wire Id="195" Joints="N(165:c0t0v) h(20) v(-65) N(194:array)" xmlns="http://www.ni.com/PlatformFramework" />
                     <Literal Bounds="105 125 39.2 16" DataType="Int32" Facade="NationalInstruments.MocCommon.Modeling.INumericBehavior" Id="196" Label="197" xmlns="http://www.ni.com/MocCommon">
                         <p.Data>0</p.Data>
                         <NumericBehavior Interpretation="Exact" ValueFormatter="LV:" />
                     </Literal>
                     <Wire Id="198" Joints="N(196:Out) h(35.8000031) v(20) B(2) N(194:c0t0v) B(2) v(40) B(4) N(199:c0t0v) B(4) v(40) B(6) N(201:c0t0v) B(6) v(10) h(15) v(35) N(202:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
                     <TextNode AttachedTo="196" Bounds="105 125 0 0" Id="197" Text="index" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
-                    <ArrayIndex Bounds="200 165 40 30" Id="199" Terminals="array=209, c0t0v=198, c0t1v=212" />
-                    <ArrayIndex Bounds="200 205 40 30" Id="201" Terminals="array=204, c0t0v=198, c0t1v=213" />
+                    <ArrayIndex Bounds="210 165 40 30" Id="199" Terminals="array=303, c0t0v=198, c0t1v=212" />
+                    <ArrayIndex Bounds="210 205 40 30" Id="201" Terminals="array=305, c0t0v=198, c0t1v=213" />
                     <ArrayIndex Bounds="200 250 40 30" Id="202" Terminals="array=205, c0t0v=198, c0t1v=214" />
-                    <Wire Id="204" Joints="N(165:c2t0v) h(20) v(-15) N(201:array)" xmlns="http://www.ni.com/PlatformFramework" />
                     <Wire Id="205" Joints="N(165:c3t0v) h(2.5) v(5) h(2.5) v(5) h(5) v(5) N(202:array)" xmlns="http://www.ni.com/PlatformFramework" />
-                    <Wire Id="209" Joints="N(165:c1t0v) h(15) v(-40) N(199:array)" xmlns="http://www.ni.com/PlatformFramework" />
                     <Wire Id="211" Joints="N(194:c0t1v) h(38) v(25) N(169:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
                     <Wire Id="212" Joints="N(199:c0t1v) h(5) v(-5) N(169:c1t0v)" xmlns="http://www.ni.com/PlatformFramework" />
                     <Wire Id="213" Joints="N(201:c0t1v) h(5) v(-20) N(172:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
@@ -357,6 +355,8 @@
                     </DataAccessor>
                     <Wire Id="300" Joints="N(192:R1) N(297:Value)" xmlns="http://www.ni.com/PlatformFramework" />
                     <TextNode AttachedTo="297" Bounds="500 195 42 16" Id="299" Text="matrix s" xmlns="http://www.ni.com/PlatformFramework" />
+                    <Wire Id="303" Joints="N(165:c1t0v) h(25) v(-40) N(199:array)" xmlns="http://www.ni.com/PlatformFramework" />
+                    <Wire Id="305" Joints="N(165:c2t0v) h(32) v(-15) N(201:array)" xmlns="http://www.ni.com/PlatformFramework" />
                 </CaseStructure.Case>
                 <CaseStructure.Case Bounds="5 5 855 365" Id="18" Pattern="Error" />
                 <CaseStructure.Selector Bounds="-4 30 13 15" Docking="Left" Id="19" Terminals="16=23, 17, 18" />
