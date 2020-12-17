@@ -56,22 +56,10 @@
             <TextNode AttachedTo="30" Bounds="605 735 54 16" Id="45" Text="x.estimate" xmlns="http://www.ni.com/PlatformFramework" />
             <TextNode AttachedTo="18" Bounds="-148 685 8 16" Id="43" Text="A" xmlns="http://www.ni.com/PlatformFramework" />
             <TextNode AttachedTo="24" Bounds="-78 835 8 16" Id="44" Text="b" xmlns="http://www.ni.com/PlatformFramework" />
-            <ComplexConjugateTransposeMatrix Bounds="-15 685 50 50" Id="130" Target="Complex\ Conjugate\ Transpose\ Matrix\.gvi">
-                <p.MethodDeclaration>
-                    <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
-                        <Parameter Id="L0" Desc="input matrix" />
-                        <Parameter Id="R0" Desc="matrix conjugate transpose" />
-                        <Parameter Id="R4" Desc="error" />
-                    </MethodDeclaration>
-                </p.MethodDeclaration>
-                <Terminal DataType="ComplexDouble[,]" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
-                <Terminal DataType="ComplexDouble[,]" Direction="Output" Hotspot="50 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
-                <Terminal DataType="Int32" Direction="Output" Hotspot="50 45" Id="R4" xmlns="http://www.ni.com/PlatformFramework" />
-            </ComplexConjugateTransposeMatrix>
             <Comment Bounds="35 660 41.6 28.8" Id="135" xmlns="http://www.ni.com/MocCommon">
                 <p.Text>A^*</p.Text>
             </Comment>
-            <Wire Id="154" Joints="N(179:R1) h(65) v(5) N(155:L1)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="154" Joints="N(380:R1) h(65) v(5) N(155:L1)" xmlns="http://www.ni.com/PlatformFramework" />
             <ComplexInverseMatrix Bounds="180 720 50 50" Id="155" Target="Complex\ Inverse\ Matrix\.gvi">
                 <p.MethodDeclaration>
                     <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
@@ -86,35 +74,7 @@
                 <Terminal DataType="ComplexDouble[,]" Direction="Output" Hotspot="50 15" Id="R1" xmlns="http://www.ni.com/PlatformFramework" />
                 <Terminal DataType="Int32" Direction="Output" Hotspot="50 35" Id="R3" xmlns="http://www.ni.com/PlatformFramework" />
             </ComplexInverseMatrix>
-            <Wire Id="161" Joints="N(182:R1) h(10) v(110) N(187:L1)" xmlns="http://www.ni.com/PlatformFramework" />
-            <ComplexAxB Bounds="60 715 50 50" Id="179" Target="Complex\ A\ x\ B\.gvi">
-                <p.MethodDeclaration>
-                    <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
-                        <Parameter Id="L1" Desc="A" />
-                        <Parameter Id="L3" Desc="B" />
-                        <Parameter Id="R1" Desc="A x B" />
-                        <Parameter Id="R3" Desc="error" />
-                    </MethodDeclaration>
-                </p.MethodDeclaration>
-                <Terminal DataType="ComplexDouble[,]" Direction="Input" Hotspot="0 15" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
-                <Terminal DataType="ComplexDouble[,]" Direction="Input" Hotspot="0 35" Id="L3" xmlns="http://www.ni.com/PlatformFramework" />
-                <Terminal DataType="ComplexDouble[,]" Direction="Output" Hotspot="50 15" Id="R1" xmlns="http://www.ni.com/PlatformFramework" />
-                <Terminal DataType="Int32" Direction="Output" Hotspot="50 35" Id="R3" xmlns="http://www.ni.com/PlatformFramework" />
-            </ComplexAxB>
-            <ComplexAxB Bounds="295 695 50 50" Id="182" Target="Complex\ A\ x\ B\.gvi">
-                <p.MethodDeclaration>
-                    <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
-                        <Parameter Id="L1" Desc="A" />
-                        <Parameter Id="L3" Desc="B" />
-                        <Parameter Id="R1" Desc="A x B" />
-                        <Parameter Id="R3" Desc="error" />
-                    </MethodDeclaration>
-                </p.MethodDeclaration>
-                <Terminal DataType="ComplexDouble[,]" Direction="Input" Hotspot="0 15" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
-                <Terminal DataType="ComplexDouble[,]" Direction="Input" Hotspot="0 35" Id="L3" xmlns="http://www.ni.com/PlatformFramework" />
-                <Terminal DataType="ComplexDouble[,]" Direction="Output" Hotspot="50 15" Id="R1" xmlns="http://www.ni.com/PlatformFramework" />
-                <Terminal DataType="Int32" Direction="Output" Hotspot="50 35" Id="R3" xmlns="http://www.ni.com/PlatformFramework" />
-            </ComplexAxB>
+            <Wire Id="161" Joints="N(381:R1) h(10) v(110) N(187:L1)" xmlns="http://www.ni.com/PlatformFramework" />
             <ComplexAxVector Bounds="360 805 50 50" Id="187" Target="Complex\ A\ x\ Vector\.gvi">
                 <p.MethodDeclaration>
                     <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
@@ -129,11 +89,11 @@
                 <Terminal DataType="ComplexDouble[]" Direction="Output" Hotspot="50 15" Id="R1" xmlns="http://www.ni.com/PlatformFramework" />
                 <Terminal DataType="Int32" Direction="Output" Hotspot="50 35" Id="R3" xmlns="http://www.ni.com/PlatformFramework" />
             </ComplexAxVector>
-            <Wire Id="281" Joints="N(130:R0) h(10) v(10) B(2) h(205) v(30) N(182:L3) B(2) v(30) N(179:L1)" xmlns="http://www.ni.com/PlatformFramework" />
-            <Wire Id="282" Joints="N(155:R1) h(7) v(-25) N(182:L1)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="281" Joints="N(375:R0) h(10) v(10) B(2) h(205) v(30) N(381:L3) B(2) v(30) N(380:L1)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="282" Joints="N(155:R1) h(7) v(-25) N(381:L1)" xmlns="http://www.ni.com/PlatformFramework" />
             <Wire Id="316" Joints="N(187:R1) h(5) B(1) v(-80) N(30:Value) B(1) v(80) N(338:L3)" xmlns="http://www.ni.com/PlatformFramework" />
             <Wire Id="320" Joints="N(24:Value) h(310) B(1) N(187:L3) B(1) v(90) h(325) v(-45) N(339:y)" xmlns="http://www.ni.com/PlatformFramework" />
-            <Wire Id="321" Joints="N(18:Value) h(15) B(1) h(45) B(2) N(130:L0) B(2) v(-25) h(538) v(215) N(338:L1) B(1) v(60) N(179:L3)" xmlns="http://www.ni.com/PlatformFramework" />
+            <Wire Id="321" Joints="N(18:Value) h(15) B(1) h(45) B(2) N(375:L0) B(2) v(-25) h(538) v(215) N(338:L1) B(1) v(60) N(380:L3)" xmlns="http://www.ni.com/PlatformFramework" />
             <ComplexAxVector Bounds="510 865 50 50" Id="338" Target="Complex\ A\ x\ Vector\.gvi">
                 <p.MethodDeclaration>
                     <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
@@ -170,6 +130,46 @@
             <Square Bounds="770 865 30 30" Id="372" />
             <Wire Id="373" Joints="N(371:R0) N(372:x)" xmlns="http://www.ni.com/PlatformFramework" />
             <Wire Id="374" Joints="N(372:x^2) h(5) v(-60) N(33:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+            <MethodCall Bounds="-15 685 50 50" Id="375" Target="Complex\ Conjugate\ Transpose\ Matrix\.gvi">
+                <p.MethodDeclaration>
+                    <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+                        <Parameter Id="L0" Desc="input matrix" />
+                        <Parameter Id="R0" Desc="matrix conjugate transpose" />
+                        <Parameter Id="R4" Desc="error" />
+                    </MethodDeclaration>
+                </p.MethodDeclaration>
+                <Terminal DataType="ComplexDouble[,]" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+                <Terminal DataType="ComplexDouble[,]" Direction="Output" Hotspot="50 5" Id="R0" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+                <Terminal DataType="Int32" Direction="Output" Hotspot="50 45" Id="R4" Usage="Optional" xmlns="http://www.ni.com/PlatformFramework" />
+            </MethodCall>
+            <ComplexAxB Bounds="60 715 50 50" Id="380" Target="Complex\ A\ x\ B\.gvi">
+                <p.MethodDeclaration>
+                    <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+                        <Parameter Id="L1" Desc="A" />
+                        <Parameter Id="L3" Desc="B" />
+                        <Parameter Id="R1" Desc="A x B" />
+                        <Parameter Id="R3" Desc="error" />
+                    </MethodDeclaration>
+                </p.MethodDeclaration>
+                <Terminal DataType="ComplexDouble[,]" Direction="Input" Hotspot="0 15" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
+                <Terminal DataType="ComplexDouble[,]" Direction="Input" Hotspot="0 35" Id="L3" xmlns="http://www.ni.com/PlatformFramework" />
+                <Terminal DataType="ComplexDouble[,]" Direction="Output" Hotspot="50 15" Id="R1" xmlns="http://www.ni.com/PlatformFramework" />
+                <Terminal DataType="Int32" Direction="Output" Hotspot="50 35" Id="R3" xmlns="http://www.ni.com/PlatformFramework" />
+            </ComplexAxB>
+            <ComplexAxB Bounds="295 695 50 50" Id="381" Target="Complex\ A\ x\ B\.gvi">
+                <p.MethodDeclaration>
+                    <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+                        <Parameter Id="L1" Desc="A" />
+                        <Parameter Id="L3" Desc="B" />
+                        <Parameter Id="R1" Desc="A x B" />
+                        <Parameter Id="R3" Desc="error" />
+                    </MethodDeclaration>
+                </p.MethodDeclaration>
+                <Terminal DataType="ComplexDouble[,]" Direction="Input" Hotspot="0 15" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
+                <Terminal DataType="ComplexDouble[,]" Direction="Input" Hotspot="0 35" Id="L3" xmlns="http://www.ni.com/PlatformFramework" />
+                <Terminal DataType="ComplexDouble[,]" Direction="Output" Hotspot="50 15" Id="R1" xmlns="http://www.ni.com/PlatformFramework" />
+                <Terminal DataType="Int32" Direction="Output" Hotspot="50 35" Id="R3" xmlns="http://www.ni.com/PlatformFramework" />
+            </ComplexAxB>
         </BlockDiagram>
         <CPFrontPanel Height="[float]1600" Id="13" Width="[float]2000">
             <ArrayViewer ArrayElement="[UIModel]16" BaseName="[string]Array" Columns="[int]3" Dimensions="[int]2" Height="[float]133" Id="19" Label="[UIModel]38" Left="[float]498" Orientation="[SMOrientation]Horizontal" Rows="[int]5" Top="[float]105" Value="{DataItemBinding Id=17}" Width="[float]272" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
